@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Lynn-Hayot-IUT2</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+</head>
+
+<header>
+<nav>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/lune.png"><img>
+    </button>
+
+    <div class="dropdown">
+        <button class="bouton">Projets</button>
+        <div class="dropdown-child">
+            <a href="projet.html">Projet 1</a>
+            <a href="projet.html">Projet 1</a>
+            <a href="projet.html">Projet 1</a>
+        </div>
+    </div>
+    
+    <a href="cv.html">CV</a>
+    <a href="contacts.html">Contacts</a>
+    <a href="accueil.html">Accueil</a>
+</nav>
+
+<h1> Bienvenue </h1>
+</header>
+
+<body id="body" class="accueil">
+    <section class="presentation">
+        <div class="perso">
+            <img src="images/image-perso.jpg" alt="image-perso">
+
+            <ul>
+                <li>Nom</li>
+                <li>Age :</li>
+                <li>Adresse : djshjkdfhzjksfhlkshfjkshlkfhjkqjkqhf</li>
+            </ul>
+        </div>
+
+        <div class="accroche">
+            <h2>A propos de moi</h2>
+            <p>
+                Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+
+                Généralement, on utilise un texte en faux latin (le texte ne veut rien dire, il a été modifié), le Lorem ipsum ou Lipsum. L'avantage du latin est que l'opérateur sait au premier coup d'œil que la page contenant ces lignes n'est pas valide et que l'attention du lecteur n'est pas dérangée par le contenu, lui permettant de demeurer concentré sur le seul aspect graphique. 
+            </p>
+            <button><a href="contacts.html">Me contacter</a></button>
+        </div>
+    </section>
+
+    <section id="projets">
+        <h2>Mes projets</h2>
+        <div class="slider">
+
+            <!-- Slides projet -->
+            <div class="slide fade" id="slide1">
+                <div class="nb">1 / 3</div>
+                <div class="projet">
+                    <img src="images/Kazuha.jpg">
+                    <p>
+                        Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+
+                Généralement, on utilise un texte en faux latin (le tex
+                    </p>
+                </div>
+                <div class="text">Projet 1</div>
+                <a href="#">En savoir plus !!</a>
+            </div>
+          
+            <div class="slide fade" id="slide2">
+                <div class="nb">2 / 3</div>
+                <div class="projet">
+                    <img src="images/kazu_attente.jpg">
+                    <p>
+                        Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+
+                Généralement, on utilise un texte en faux latin (le tex
+                    </p>
+                </div>
+                <div class="text">Projet 2</div>
+                <a href="#">En savoir plus !!</a>
+            </div>
+          
+            <div class="slide fade" id="slide3">
+                <div class="nb">3 / 3</div>
+                <div class="projet">
+                    <img src="images/kazu_heureux.jpg">
+                    <p>
+                        Le lorem ipsum (également appelé faux-texte, lipsum, ou bolo bolo1) est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée.
+
+                Généralement, on utilise un texte en faux latin (le tex
+                    </p>
+                </div>
+                <div class="text">Projet 3</div>
+                <a href="#">En savoir plus !!</a>
+            </div>
+          
+            <!-- Boutons -->
+            <a class="pre" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+          
+            <!-- Dots -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+    </section>
+</body>
+
+<footer>
+<p>
+    Mis à jour le : xx-xx-xxxx
+</p>
+</footer>
+</html>

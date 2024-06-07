@@ -456,7 +456,18 @@ footer{
 /*-----------------------Projet-------------------------------*/
 
 
+.projet-page ul{
+    padding: 0px;
+    text-align: left;
+    list-style: none;
+}
+
+
 /*--Presentation projet--*/
+.projet-pres div{
+    width:80%;
+    text-align: center;
+}
 
 .projet-pres{
     display:flex;
@@ -471,20 +482,15 @@ footer{
     position: relative;
 }
 
-.projet-pres ul{
-    padding: 0px;
-    text-align: left;
-    list-style: none;
-}
-
-.accroche-proj{
-    width:1200px;
-    text-align: center;
-}
-
 
 /*--Travail--*/
-
+.travail {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 
 /*-------------------------cv---------------------*/

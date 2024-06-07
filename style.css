@@ -55,7 +55,7 @@
     --background-color:#F5F6FF;
     --headbg:url(images/bannière\ officielle.png);
     --main-color:#14121C;
-    --filter-logo:invert(100%);
+    --filter-logo:invert(0%);
 
     --title1-color: white;
     --title1-shadow: 0 0 60px  white;
@@ -279,7 +279,6 @@ footer{
     background: var(--bg-accroche);
 
     width:800px;
-    height: 450px;
     padding:20px;
     margin:20px;
 }

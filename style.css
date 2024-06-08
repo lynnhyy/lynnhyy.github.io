@@ -464,9 +464,11 @@ footer{
 
 
 /*--Presentation projet--*/
-.projet-pres div{
+.sect {
     width:80%;
+    padding:15px;
     text-align: center;
+    border: solid 1px 
 }
 
 .projet-pres{
@@ -477,20 +479,23 @@ footer{
 }
 
 .projet-pres img{
-    width: 700px;
     height: 400px;
     position: relative;
 }
 
 
 /*--Travail--*/
+
 .travail {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
 }
+.travail img {
+    width:80%;
+}
+
 
 
 /*-------------------------cv---------------------*/

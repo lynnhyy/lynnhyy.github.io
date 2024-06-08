@@ -11,7 +11,7 @@
         --title1-color: white;
         --title1-shadow: 0 0 60px  white;
         --title2-color:white;
-        --title3-color:gold;
+        --title3-color:white;
 
         /*----header---*/
         
@@ -47,6 +47,9 @@
         --proja-shadow: black;
         --projtitre:#16004C;
         --projborder:#AADBFD;
+
+        /*----Projet---*/
+        --bg-travail: #14121C;
     }
 }
 
@@ -60,7 +63,7 @@
     --title1-color: white;
     --title1-shadow: 0 0 60px  white;
     --title2-color:#14121C;
-    --title3-color:gold;
+    --title3-color:black;
 
     /*----header---*/
     
@@ -96,6 +99,9 @@
     --proja-shadow: black;
     --projtitre:#b1b4f5;
     --projborder:#70c1fa;
+
+    /*----Projet---*/
+    --bg-travail:#B5B9FC;
 }
 
 
@@ -382,8 +388,8 @@ footer{
 }
 
 .projet img{
-    min-width:380px;
-    height:500px;
+    min-width:450px;
+    height: 500px;
     border-radius: 15px;
 }
 
@@ -462,6 +468,15 @@ footer{
     list-style: none;
 }
 
+.projet-page{
+    display:flex;
+    flex-direction: column;
+    gap:100px;
+    flex-wrap: wrap;
+}
+ .projet-page p{
+    padding : 25px;
+ }
 
 /*--Presentation projet--*/
 .sect {
@@ -469,13 +484,15 @@ footer{
     padding:15px;
     text-align: center;
     border: solid 1px var(--border-color);
+    background:var(--bg-travail)
 }
 
 .projet-pres{
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 50px;
     align-items: center;
+
 }
 
 .projet-pres img{
@@ -487,15 +504,35 @@ footer{
 /*--Travail--*/
 
 .travail {
-    display: flex;
+    display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
 }
 .travail img {
     width:80%;
 }
 
-
+.photos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+.photos img{
+    width:750px;
+}
+.photos figure{
+    margin: 0px;
+    padding:0px;
+}
+/*acquis*/
+.acquis {
+    display:flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+}
 
 /*-------------------------cv---------------------*/

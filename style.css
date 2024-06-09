@@ -49,7 +49,7 @@
         --projborder:#AADBFD;
 
         /*----Projet---*/
-        --bg-travail: #14121C;
+        --bg-travail: #16004C;
     }
 }
 
@@ -471,9 +471,11 @@ footer{
 .projet-page section{
     display:flex;
     flex-direction: column;
-    align-items: center;
     gap:100px;
+    align-items: center;
+    
 }
+
  .projet-page p{
     padding : 25px;
  }
@@ -481,6 +483,7 @@ footer{
 /*--Presentation projet--*/
 .sect {
     width:80%;
+    min-width:800px;
     padding:15px;
     text-align: center;
     border: solid 1px var(--border-color);
@@ -515,7 +518,7 @@ footer{
     justify-content: center;
 }
 .photos img{
-    width:750px;
+    width: 750px;
 }
 .photos figure{
     margin: 0px;

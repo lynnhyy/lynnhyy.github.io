@@ -101,7 +101,7 @@
     --projborder:#70c1fa;
 
     /*----Projet---*/
-    --bg-travail:#B5B9FC;
+    --bg-travail:linear-gradient(#B5B9FC, #F6D6FF);
 }
 
 
@@ -137,9 +137,13 @@ h2{
 h3{
     text-align: center;
     color:var(--title3-color);
-    font-size: 25px;
+    font-size: 35px;
 }
 
+h4{
+    text-align: left;
+    font-size: 25px;
+}
 .logo{
     width:75px;
     height:75px;
@@ -289,18 +293,21 @@ footer{
     margin:20px;
 }
 
-.accroche button{
+.button-important{
     color:var(--main-color);
     background:var(--acc-btn);
     width:200px;
     height:50px;
     border: solid 1px var(--acc-btn);
     border-radius: 15px;
+    box-shadow: 0 0 40px  var(--accroche-shadow);
 }
-.accroche a{
+.button-important a{
     text-decoration: none;
-    color:var(--title1-color);
     font-size: 25px;
+    color:white;
+    text-shadow: 3px 2px black;
+    
 }
 
 
@@ -415,16 +422,15 @@ footer{
     text-align: center;
 }
 
-.slide a{
-    color: var(--proja);
-    text-shadow:  3px 1px 3px var(--proja-shadow);
+.slide .button-important{
     font-size: 30px;
-
     position:absolute;
     width:auto;
     bottom: 20px;
     right:20px;
 }
+
+
 
 /*--------------------------Contacts------------------------*/
 

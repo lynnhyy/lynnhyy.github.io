@@ -49,13 +49,13 @@
         --projborder:#AADBFD;
 
         /*----Projet---*/
-        --bg-travail: #16004C;
+        --bg-travail: linear-gradient(#16004C, #4c006c);
     }
 }
 
 [data-theme="light"] {
     /*----Commun----*/
-    --background-color:#F5F6FF;
+    --background-color:#f5f6ffcc;
     --headbg:url(images/bannière\ officielle.png);
     --main-color:#14121C;
     --filter-logo:invert(0%);

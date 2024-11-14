@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Hayot-IUT2</title>
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/projet.css">
+<script src="script.js"></script>
+</head>
+<header>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+
+                </ul>
+            </div>
+        </li>       
+    </ul>
+    
+    
+</header>
+<body class="projet-page">
+    <section class = "Title">
+        <h1> Installation d'une machine serveur</h1>
+    </section>
+
+    <section class="projet-pres">
+        <div class="premiere-div">
+            <img src="images/sae2.03/sae2.03.jpeg">
+            <ul>
+                <li>Participants: Autonomie</li>
+                <li>Logiciels: Qemu/KVM, Shell Linux, Word</li>
+                <li>Temps : 8h réparties en 2 semaines</li>
+            </ul>
+        </div>
+        <div class="paragraphe">
+            <h3>Le but du projet</h3>
+            <p>-> <a href="documents/sae2.03/guide_installation.pdf" target="blank">Téléchargement</a></p>
+            <h4>
+                PROBLEMATIQUE PRINCIPALE : Réalisation d’un guide d’installation rédigé en Anglais d'un serveur Debian 11 équipé d'Apache, PostgreSQL et PHP
+            </h4>
+            <p>
+                Il nous a été demandé d’installer Debian 12 sur une une machine, sans environnement graphique.
+De plus, il nous fallait installer et configurer les logiciels Apache, PostgreSQL et PHP.
+Le but final du projet était de réaliser un guide d’installation détaillé de Debian et de ces logiciels en anglais.
+            </p>
+
+            <h4>
+                DONNEES ET SOURCES A DISPOSITION
+            </h4>
+            <ul>
+                <li>- Cahier des charges</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="travail">
+        
+        <div class="paragraphe">
+            <h3>Mon travail</h3>
+            <ul>
+                <p>Rendus attendus :</p>
+                <li>- Un guide d'installation en anglais</li>
+                <li>- Des captures d'écran obligatoires demandées au fur et à mesure de l'installation</li>
+            </ul>
+            <h4>Première étape : phase d'installation</h4>
+            <p>Pour réaliser ce projet, nous avons utilisé une machine virtuelle (lancée avec Qemu). Pendant cette phase je me suis concentré principalement sur l’installation des logiciels, en prenant quelques notes et des screenshots pour m’aider à rédiger le guide d’installation.
+                La première étape était d’installer l’OS sur la machine virtuelle. J’ai donc vérifié les paramètres de la VM, j’ai vérifié la clé d’installation de Debian et j’ai lancé l’installation. 
+                Par la suite il m’a fallu installer Apache2 sur la machine virtuelle, le lancer, et vérifier son installation avec quelques commandes simples.
+            </p>
+                
+        </div>
+        
+        <div class="photos">
+            <figure>
+                <img src="images/sae2.03/software-selection.png" class="photo">
+                <figcaption>cature d'écran de l'installation de l'OS</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.03/apache2.png" class="photo">
+                <figcaption>état d'apache</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.03/page-default-apache.png" class="photo">
+                <figcaption>page défaut d'apache</figcaption>
+            </figure>
+        </div>
+
+        <div class="paragraphe">
+            <h4>Deuxième étape : PostgreSQL</h4>
+            <p>
+                La deuxième partie la plus longue de ce projet, a été l’installation et la configuration de la base de données. 
+                Il a fallu d’abord installer PostgreSQL puis créer un nouvel utilisateur et une base de données. Pour le projet nou devions également créer quelques instances dans la base de données et les exploiter afin de voir si le logiciel fonctionnait correctement.
+                Comme nous étions sur une machine virtuelle pour le projet, il fallait également rendre possible l’accès à notre base depuis la machine physique en modifiant les fichiers de configuration de postgreSQL.
+            </p>
+            <p>
+                Enfin nous devions installer PHP et le tester avec un script par défaut. Puis installer PHPPgAdmin pour le configurer et avoir accès à nos bases de données depuis un navigateur.
+            </p>    
+        </div>
+
+        <div class="photos">
+            <figure>
+                <img src="images/sae2.03/systemctl-postgres.png" class="photo">
+                <figcaption>état postgreSQL</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.03/databases.png" class="photo">
+                <figcaption>databases PostgreSQL</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.03/conf1_ap.png" class="photo">
+                <figcaption>configuration 1</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.03/conf1_av.png" class="photo">
+                <figcaption>configuration 2</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.03/commandes-sql.png" class="photo">
+                <figcaption>commandes SQL VM</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.03/sql_linux.png" class="photo">
+                <figcaption>commandes SQL Linux</figcaption>
+            </figure>
+        </div>
+
+        <div class="paragraphe">
+            <h4>Troisième étape : Rédaction</h4>
+            <p>
+                Finalement j’ai dû rédiger un guide d’installation détaillé sur tout le projet, en ajoutant les images récupérées au cours du projet et les commandes du shell utilisées à chaque étapes.
+            </p>    
+        </div>
+        <div class="photos">
+            <figure>
+                <img src="images/sae2.03/extrait_guide.png" class="photo">
+                <figcaption>extrait de mon guide</figcaption>
+            </figure>
+        </div>
+        
+    </section>
+</body>
+
+<footer>
+
+    Mis à jour le : 12/11/2024
+
+</footer>
+
+</html>

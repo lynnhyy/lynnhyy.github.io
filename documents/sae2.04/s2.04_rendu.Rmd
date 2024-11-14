@@ -1,0 +1,224 @@
+---
+title: "SAE S2.04"
+output:
+  pdf_document: default
+  word_document:
+    toc: no
+  html_document:
+    toc: no
+    always_allow_html: true
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(kableExtra)
+library(tidyr)
+hayotj <- read.delim("~/Travail/hayotj.csv")
+
+```
+
+The aim of this project is to produce for our customer a visual and statistical support with relevant data which enables to establish a link between the nutriscore grade and the nutritional values of a french product in the "en:one-dish-meal" category.
+
+Explication du nutriscore
+
+To respond to the request, we will use the database hayotj.csv which groups data on french products in the "en:one-dish-meals" category without duplication. This database contains 22,216 products, it's an extract from the 	
+http://world-en.openfoodfacts.org database which contains about 3 millions products.
+
+We have a few variables that will be helpful to respond to the subject :
+
+The code and the url of a product are nominal qualitative  variables that distinguish the product from the others.
+The product_name is the name of the product on the market.
+The nutriscore_score and nutriscore_grade are ordinal qualitative  variables that rank product quality, the nutriscore_score is expressed as a number, instead of the nutriscore_grade expressed as a letter (a, b, c, d, e).
+The quantitative variables like salt_100g, carbohydrates_100g, sugars_100g, fat_100g or proteins_100g give us the nutritional values per 100g of the product.
+The energy_100g expresses the amount of energy given by the product in kj, the computed_energy_100g is about the same value but calculated manually.
+Finally, the ordinal qualitative variables level_fat, level_salt, level_saturated_fat and level_sugars which indicate the level of each category...
+
+
+
+###########
+
+Sujet : Quel lien peut-on établir entre le nutriscore (A,B,C,D,E) et les variables nutritionnelles
+pour les produits de la famille 'en:one-dish-meals' en France ? --> ok
+
+Qu'est-ce que le nutriscore ?
+
+Quels sont les produits que l'on va étudier ? --> Présentation base de données (variables, nombres de données) --> ok
+
+Combien d'observations (graphes/tableaux)?
+Structure du document
+
+Consigne : Le document devra contenir au moins 5 graphiques et/ou tableaux et/ou statistiques pertinents.
+Avant chaque graphique ou tableau, vous devez décrire brièvement les éléments qui le constituent
+puis ensuite après le graphique ou tableau vous devez expliquer la ou les informations essentielles
+qu’il apporte.
+
+```{r}
+hayotj %>%
+  select(product_name, nutriscore_grade, fat_100g, saturated_fat_100g, sugars_100g, salt_100g, energy_100g) %>%
+  slice_head(n = 10)
+```
+This table shows us the 10 first rows of the database with the useful variables for a study.
+We can notice that the worst nutriscore_grade here is D, attributed to the "100G Minestrone" and the "10 Crêpes Chocolat". Their common points are their high fat and sugar content and the large amount of energy that they provide.
+
+## Entre tableau et fat level : First, we are going to look at the fat content of the products and its impact on the nutriscore grade.
+
+
+
+```{r}
+nutriscore_colors <- c('a' = '#038141', 'b' = '#85bb2f', 'c' = '#fecb02', 'd' = '#ee8100', 'e' = '#e63e11')
+
+ggplot(hayotj)+
+  geom_boxplot(aes(x=nutriscore_grade, y=fat_100g), fill = nutriscore_colors)+
+  labs(color="nutriscore grade")
+
+ggplot(hayotj)+
+  geom_boxplot(aes(x=nutriscore_grade, y=carbohydrates_100g), fill = nutriscore_colors)+
+  labs(color="nutriscore grade")
+
+ggplot(hayotj)+
+  geom_boxplot(aes(x=nutriscore_grade, y=proteins_100g), fill = nutriscore_colors)+
+  labs(color="nutriscore grade")
+
+ggplot(hayotj)+
+  geom_boxplot(aes(x=nutriscore_grade, y=energy_100g), fill = nutriscore_colors)+
+  labs(color="nutriscore grade")
+```
+
+
+```{r}
+hayotj$level_fat <- factor(hayotj$level_fat, levels = c('h', 'm', 'l'))
+
+percentage_data <- hayotj %>%
+  group_by(level_fat, nutriscore_grade) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+nutriscore_colors <- c('a' = '#038141', 'b' = '#85bb2f', 'c' = '#fecb02', 'd' = '#ee8100', 'e' = '#e63e11')
+
+ggplot(percentage_data, aes(x = level_fat, y = percentage, fill = nutriscore_grade)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Percentage of Nutriscore Grades by Fat Level",
+       x = "Fat Level",
+       y = "Percentage") +
+  scale_fill_manual(values = nutriscore_colors) +  # You can choose any palette you prefer
+  theme_minimal() +
+  ylim(0, 100)
+
+hayotj$level_sugars <- factor(hayotj$level_sugars, levels = c('h', 'm', 'l'))
+
+percentage_data <- hayotj %>%
+  group_by(level_sugars, nutriscore_grade) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+nutriscore_colors <- c('a' = '#038141', 'b' = '#85bb2f', 'c' = '#fecb02', 'd' = '#ee8100', 'e' = '#e63e11')
+
+ggplot(percentage_data, aes(x = level_sugars, y = percentage, fill = nutriscore_grade)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Percentage of Nutriscore Grades by level_sugars",
+       x = "level_sugars",
+       y = "Percentage") +
+  scale_fill_manual(values = nutriscore_colors) +  # You can choose any palette you prefer
+  theme_minimal() +
+  ylim(0, 100)
+```
+
+
+
+```{r}
+
+hayotj$level_fat <- factor(hayotj$level_fat, levels = c('h', 'm', 'l'))
+
+percentage_data <- hayotj %>%
+  group_by(level_fat, nutriscore_grade) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+nutriscore_colors <- c('a' = '#038141', 'b' = '#85bb2f', 'c' = '#fecb02', 'd' = '#ee8100', 'e' = '#e63e11')
+
+ggplot(percentage_data, aes(x = level_fat, y = percentage, fill = nutriscore_grade)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Percentage of Nutriscore Grades by Fat Level",
+       x = "Fat Level",
+       y = "Percentage") +
+  scale_fill_manual(values = nutriscore_colors) +  # You can choose any palette you prefer
+  theme_minimal()
+
+
+
+hayotj$level_sugars <- factor(hayotj$level_sugars, levels = c('h', 'm', 'l'))
+
+percentage_data <- hayotj %>%
+  group_by(level_sugars, nutriscore_grade) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+ggplot(percentage_data, aes(x = level_sugars, y = percentage, fill = nutriscore_grade)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Percentage of Nutriscore Grades by level_sugars",
+       x = "level_sugars",
+       y = "Percentage") +
+  scale_fill_manual(values = nutriscore_colors) +  # You can choose any palette you prefer
+  theme_minimal()
+
+```
+This bar chart shows us more than half of the product with a high fat level have a poor nutriscore rating (d or e), whereas the majority of product with a low fat level have a good nutriscore rating (a or b). The products with a medium fat level have a wider range of grades. 
+So we can conclude that fat content have a major impact on nutriscore scores : the higher the fat content, lower the nutriscore score. 
+
+##Entre fat level et score/grade : Now we are going to take a look at the carbohydrate content of a product and more specifically its sugar content. Before that, we need to establish a link between the product's nutriscore score and its grade.
+
+```{r}
+average_score <- hayotj%>%
+  group_by(nutriscore_grade)%>%
+  summarise(avg_score = mean(nutriscore_score))
+
+ggplot(average_score, aes(x= nutriscore_grade, y=avg_score ))+
+  geom_bar(stat="identity", fill= c('a' = '#038141', 'b' = '#85bb2f', 'c' = '#fecb02', 'd' = '#ee8100', 'e' = '#e63e11'))
+```
+The bar chart shows us the different nutriscore grades on the X-axis by the average of the nutriscore score on the Y-axis. The average of products with nutriscore grade E is the highest, with a score of 23. In contrast, the lowest average nutriscore score is attributed to the nutriscore grade A with a score of -6.
+A clear link can therefore be established between nutriscore score and nutriscore grade: the lower the nutriscore score, the better the grade. 
+
+##Entre score/grade et carbohydrates : We can now look at the carbohydrate and sugar content of products.
+
+```{r}
+nutriscore_colors <- c('a' = '#038141', 'b' = '#85bb2f', 'c' = '#fecb02', 'd' = '#ee8100', 'e' = '#e63e11')
+ggplot(hayotj, aes(x= sugars_100g, y=nutriscore_score, color=nutriscore_grade))+
+  geom_point()+
+  scale_color_manual(values = nutriscore_colors)+
+  xlim(0,100)
+
+ggplot(hayotj, aes(x= carbohydrates_100g, y=nutriscore_score, color=nutriscore_grade))+
+  geom_point()+
+  scale_color_manual(values = nutriscore_colors)+
+  xlim(0,100)
+```
+ ##Entre carbohydrates et proteins : Now we have to look at the third nutrional value of a product : the proteins.
+```{r}
+nutriscore_colors = c('a' = '#038141', 'b' = '#85bb2f', 'c' = '#fecb02', 'd' = '#ee8100', 'e' = '#e63e11')
+
+average_score <- hayotj%>%
+  group_by(nutriscore_grade)%>%
+  summarise(avg_proteins = mean(proteins_100g))
+
+ggplot(average_score, aes(x= avg_score, y=nutriscore_grade))+
+  geom_histogram(stat="identity", fill = nutriscore_colors, color='black') + 
+  xlim(0, 100)
+```
+This histogram shows the average protein percentage, on the X-axis, as a function of nutriscore grade, on the Y-axis. We can see that the percentage of proteins of the nutriscore grades D and E are almost the same. On the other hand, we have a similar protein percentages for grades A, B and C. The protein percentage of products with nutriscore grade E is only 5% higher than the protein percentage of products with grade A. So we can conclude that the protein content of a product has no real impact on its nutriscore grade.
+
+##Entre proteins et energy : At the beginning, we noticed that an other value differed with the nutriscore grade : let's take a look at the energy variable.
+
+```{r}
+nutriscore_colors = c('a' = '#038141', 'b' = '#85bb2f', 'c' = '#fecb02', 'd' = '#ee8100', 'e' = '#e63e11')
+
+hayotj %>%
+  filter(proteins_100g < 60 & fat_100g < 90 & energy_100g < 2400 & energy_100g > 0) %>%
+  ggplot() +
+  geom_boxplot(aes(x = nutriscore_grade, y = energy_100g), fill = nutriscore_colors) +
+  labs(x = "Nutriscore Grade", y = "Energy in KiloJoules for 100g", title = "Quantity of Energy for 100g Depending on the Nutriscore Grade")
+```
+
+In this boxplot we can see the nutriscore grade on the X-axis and the energy provided in kiloJoules with 100g of a product on the Y-axis. We notice that the median of energy provided by products with grade A is under 500 kiloJoules, while the median of energy provided by E-grade products is well over  1,500 kiloJoules. We can see the median increases progressively between the different nutriscore grades.
+Finally we can tell there is a clear link between the grade and the energy delivered by a product.

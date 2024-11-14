@@ -1,0 +1,42 @@
+
+@media (prefers-color-scheme: dark) {
+    :root{
+    --border-color-contact: white;
+    }
+    [data-theme = "light" ]{
+    --border-color-contact:black;
+}
+}
+
+/*--------------------------Contacts------------------------*/
+
+#suite-contacts{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+}
+
+#avatar{
+    width:200px;
+    height:auto;
+    border-radius: 1000px;
+    border : 2px solid var(--border-color-contact)
+}
+
+/*--Conteners--*/
+
+.contener{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color-contact);
+    width: 400px;
+    height: auto;
+    color:var(--main-color);
+    text-align: center;
+}
+.contener img{
+    width:60px;
+    margin-right: 10px;
+}

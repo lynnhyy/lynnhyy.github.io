@@ -3,46 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <title>Hayot-IUT2</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/projet.css">
 <script src="script.js"></script>
 </head>
-
 <header>
-    <nav>
-        <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
-            <img id="darkmode" src="images/lune.png"><img>
-        </button>
-    
-        <div class="dropdown">
-            <button class="bouton">Projets</button>
-            <div class="dropdown-child">
-                <a href="sae1.03.html">S1.03</a>
-                <a href="sae1.04.html">S1.04</a>
-                <a href="sae1.0506.html">S1.0506</a>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+
+                </ul>
             </div>
-        </div>
-        
-        <a href="cv.html">CV</a>
-        <a href="contacts.html">Contacts</a>
-        <a href="index.html">Accueil</a>
-    </nav>
+        </li>       
+    </ul>
     
-    <h1> SAE S1.03 </h1>
-</header>
+ </header>   
 
 <body class="projet-page">
+    <section class = "Title">
+        <h1> Installation d'une machine client</h1>
+    </section>
+
     <section class="projet-pres">
-        <div>
-            <h2>SAE S1.03 -
-                Installation d'un système d'exploitation</h2>
-            <img src="images/s1.03.png">
+        <div class="premiere-div">
+            <img src="images/sae1.03/s1.03.jpeg">
             <ul>
                 <li>Participants: Autonomie</li>
                 <li>Logiciels: Qemu/KVM, Mindomo</li>
             </ul>
         </div>
-        <div class="sect">
+        <div class="paragraphe">
             <h3>Le but du projet</h3>
+            <p>-> <a href="#">Téléchargement</a></p>
             <h4>
                 PROBLEMATIQUE PRINCIPALE : Installation d'un système d'exploitation avec environnement graphique
             </h4>
@@ -57,66 +69,62 @@
                 <li>- Guide d'installation</li>
             </ul>
         </div>
+
     </section>
 
     <section class="travail">
         
-        <div class="sect">
+        <div class="paragraphe">
             <h3>Mon travail</h3>
-            
-            <div class="paragraphe">
-                <ul>
-                    <li>Rendus attendus à la fin des quatre heures :</li>
-                    <li>- Une carte mentale</li>
-                    <li>- Des captures d'écran obligatoires demandées au fur et à mesure de l'installation</li>
-                </ul>
-            </div>
-
-            <div class="paragraphe">
-                <p>Nous avions deux heures pour suivre des instructions nous apprenant à installer le système d’exploitation Debian 11, avec environnement graphique, sur une machine virtuelle. Les rendus demandés étaient des captures d’écran de notre avancée à des endroit particuliers, par exemple à la création du nom d’utilisateur ou encore lors de l’installation d’un logiciel. </p>
-                <div class="photos">
-                    <figure>
-                        <img src="images/Capture06.png" class="photo">
-                        <figcaption>capture d'écran 6</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/Capture08.png" class="photo">
-                        <figcaption>capture d'écran 8</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/Capture09.png" class="photo">
-                        <figcaption>capture d'écran 9</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/Capture10.png" class="photo">
-                        <figcaption>capture d'écran 10</figcaption>
-                    </figure>
-                </div>
-            </div>
-    
-            <div class="paragraphe">
-                <p>
-                    Nous avions ensuite deux heures dédiées à la réalisation de notre carte mentale qui devait être assez précise pour nous permettre de refaire l’installation sans les instructions données pour la SAE.  Nous étions totalement libres sur le choix de présentation de la carte mentale, nous pouvions la réaliser grâce à un logiciel ou manuellement selon nos préférences. Pour ma part, j’ai décidé de prendre en main le logiciel Mindomo. Voici la carte mentale finale.
-                </p>
-                <img src="images/mindmap1.png" class="photo">
-                <img src="images/mindmap2.png" class="photo">
-            </div>
+            <ul>
+                <p>Rendus attendus à la fin des quatre heures :</p>
+                <li>Une carte mentale</li>
+                <li>Des captures d'écran obligatoires demandées au fur et à mesure de l'installation</li>
+            </ul>
+            <h4>Première étape</h4>
+            <p>Nous avions deux heures pour suivre des instructions nous apprenant à installer le système d’exploitation Debian 11, avec environnement graphique, sur une machine virtuelle. Les rendus demandés étaient des captures d’écran de notre avancée à des endroit particuliers, par exemple à la création du nom d’utilisateur ou encore lors de l’installation d’un logiciel. </p>
+                
         </div>
-    </section>
-
-    <section class="acquis">
-        <div class="sect">
-            <h3>Compétences acquises</h3>
-            <p>En conclusion, cette SAE, bien que plus courte que les autres, m’a beaucoup appris. J’ai pu enrichir mes connaissances sur Linux et je sais désormais comment installer un système d’exploitation, j’ai d’ailleurs installé Debian 12 sur mon propre ordinateur par la suite. Par ailleurs, bien que je m’y connaisse un peu en montage photo/vidéo, c’était la première fois que j’utilisais un logiciel pour créer une carte mentale et j’ai donc dû apprendre à le manipuler pour réaliser ma carte mentale dans un temps restreint.
-            </p>
+        
+        <div class="photos">
+            <figure>
+                <img src="images/sae1.03/Capture06.png" class="photo">
+                <figcaption>capture d'écran 6</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.03/Capture08.png" class="photo">
+                <figcaption>capture d'écran 8</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.03/Capture09.png" class="photo">
+                <figcaption>capture d'écran 9</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.03/Capture10.png" class="photo">
+                <figcaption>capture d'écran 10</figcaption>
+            </figure>
         </div>
+
+        <div class="paragraphe">
+            <h4>Deuxième étape</h4>
+            <p>
+                Nous avions ensuite deux heures dédiées à la réalisation de notre carte mentale qui devait être assez précise pour nous permettre de refaire l’installation sans les instructions données pour la SAE.  Nous étions totalement libres sur le choix de présentation de la carte mentale, nous pouvions la réaliser grâce à un logiciel ou manuellement selon nos préférences. Pour ma part, j’ai décidé de prendre en main le logiciel Mindomo. Voici la carte mentale finale.
+                <a href="images/titanic.png" download="Titanic.png"> clique ici man </a>
+            </p>    
+        </div>
+
+        <div class="mindmap">
+            <img src="images/sae1.03/mindmap1.png" class="photo">
+            <img src="images/sae1.03/mindmap2.png" class="photo">
+        </div>
+        
     </section>
 </body>
 
 <footer>
-    <p>
-        Mis à jour le : 09/06/2024
-    </p>
+
+    Mis à jour le : 09/11/2024
+
 </footer>
 
 </html>

@@ -3,186 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <title>Hayot-IUT2</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/cv.css">
 <script src="script.js"></script>
 </head>
 <header>
-    <nav>
-        <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
-            <img id="darkmode" src="images/lune.png"><img>
-        </button>
-    
-        <div class="dropdown">
-            <button class="bouton">Projets</button>
-            <div class="dropdown-child">
-                <a href="sae1.03.html">S1.03</a>
-                <a href="sae1.04.html">S1.04</a>
-                <a href="sae1.0506.html">S1.0506</a>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+
+                </ul>
             </div>
-        </div>
-        
-        <a href="cv.html">CV</a>
-        <a href="contacts.html">Contacts</a>
-        <a href="index.html">Accueil</a>
-    </nav>
+        </li>       
+    </ul>
     
-    <h1> Curriculum Vitae</h1>
+    
 </header>
 
 <body class="cv">
-    <section>
-        <div class="sect">
-            <h2>Diplômes et formations</h2>
-
-            <div>  
-                <h3>BUT Informatique</h3>
-                <p class="date">Depuis septembre 2023, IUT2 Grenoble</p>
-                <p>En cours de formation (1ère année)</p>
-            </div>
-            <div>
-                <h3>Baccalauréat</h3>
-                <p class="date">De septembre 2020 à juillet 2023, Lycée Polyvalent Aiguerande Belleville-en-Beaujolais</p>
-                <ul>
-                
-                    <li>• Mention Bien</li>
-                    <li>• Spécialités : Maths - Numérique et Sciences Informatiques</li>
-                    <li>• Options : Maths Expertes et Bachibac</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Bachillerato</h3>
-                <p class="date">De septembre 2020 à juillet 2023, Lycée Polyvalent Aiguerande Belleville-en-Beaujolais</p>
-                <h>Section binationale : Equivalent du Baccalauréat en Espagne</h>
-            </div>
-        </div>
+    <section class = "Title">
+        <h1> Curriculum Vitae </h1>
     </section>
-
+    
     <section>
-        <div class="sect">
-            <h2>Expériences professionnelles</h2>
-            <div>
-                <h3>Stage d'observation</h3>
-                <p class="date">Janvier 2020 Naelan Lyon</p>
-                <p>Stage d'observation de 5 jours en 3ème</p>
-                <p>Durant ce stage, j'ai pu observer le développement d'un logiciel sous
-                    différents angles et j'ai rapidement compris l'importance du travail
-                    d'équipe et de la communication entre les membres.
-                </p>
-            </div>
-
-            <div>
-                <h3>Stage d'observation</h3>
-                <p class="date">Juin 2019 Pilon Architecture Beaujeu</p>
-                <p>Stage d'observation de 5 jours en 4ème</p>
-                <p>Ce stage a été mon premier contact avec le monde du travail. J'ai
-                    appris à quel point il était important d'observer son environnement
-                    et de s'adapter en fonction de la situation.
-                </p>
-            </div>
+        <div class="paragraphe">
+           <p> Vous pouvez télécharger directement mon CV <a href="documents/cv-developpeur-info.pdf" target=""blank" download="cv-lynn-hayot.pdf">ici</a> !</p>
         </div>
-    </section>
-
-    <section>
-        <div class="sect">
-            <h2>Compétences</h2>
-
-            <div>
-                <h3>Développement et conception  Java / Python</h3>
-                <p>Programmes simples, réalisation de javaDoc et de tests unitaires, réalisation de classes, réalisation de diagramme UML, diagramme de séquence, diagramme d’objets
-                </p>
-            </div>
-
-            <div>
-                <h3>PostgreSQL</h3>
-                <p>Requêtes SQL basiques ou plus compliquées, triggers, réalisation de SEA.
-                </p>
-            </div>
-            <div>
-                <h3>Javafx, Whimsical, scene-builder, html/css</h3>
-                <p>Réalisation et conception d’interface utilisateur-machine et sites web adaptés aux besoins
-                </p>
-            </div>
-
-            <div>
-                <h3>Travail d’équipe</h3>
-                <p>Je peux aisément travailler en équipe, me rendre utile et m’organiser. Je connais mes points forts et mes défauts et sais les mettre à profit.</p>
-            </div>
-
-            <div>
-                <h3>Sens de la relation clientèle</h3>
-                <p>Je suis courtoise et toujours à l'écoute envers les gens. Par ailleurs, ma
-                    famille a tenu un restaurant, j'ai donc souvent été au contact des clients.
-                </p>
-            </div>
-
-            <div>
-                <h3>Organisation</h3>
-                <p>Je suis une personne plutôt organisée et capable de gérer de grandes
-                    charges de travail à la fois.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="sect">
-            <h2>Niveau international</h2>
-
-            <div>
-                <h3>Anglais</h3>
-                <p>Niveau B2</p>
-            </div>
-
-            <div>
-                <h3>Espagnol</h3>
-                <p>Niveau C1 - Diplôme binational</p>
-            </div>
-            <div>
-                <h3>Voyage en espagne</h3>
-                <li>Voyages effectués dans le
-                    milieu scolaire
-                </li>
-                <li>3 semaines d'échange dans un
-                    lycée espagnol
-                </li>
-            </div>
-            <div>
-                <h3>Voyage en Suisse</h3>
-                <li>Séjour de deux semaines en Suisse allemande</li>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="sect">
-            <h2>Mes centres d'intérêts</h2>
-
-            <div>
-                <h3>Jeux vidéo et nouvelles technologies</h3>
-                <p>Je passe beaucoup de temps à jouer aux jeux vidéo pendant mon temps libre, particulièrement les jeux Openworld ou RPG avec une histoire intéressante. Je trouve que c’est un bon moyen de décompresser en s’évadant dans un tout autre monde. </p>
-                <p>
-                    J’aime aussi apprendre sur les nouvelles avancées technologiques. Par exemple, je suis d’assez près l’évolution de l’Intelligence Artificielle que je trouve à la fois dangereuse et fascinante.
-                </p>
-            </div>
-
-            <div>
-                <h3>Japon</h3>
-                <p>J’aime beaucoup les langues et les cultures étrangères, mais celle qui surpasse toutes les autres est pour moi celle du Japon. L’un de mes plus grands rêves est de voyager dans ce magnifique pays. J’apprends petit à petit le japonais en autonomie et je suis inscrite dans un club de Ninjutsu, un grand art martial très diversifié.</p>
-            </div>
-            <div>
-                <h3>Lecture et littérature</h3>
-                <p>
-                    La culture littéraire est vraiment très intéressante. J’adore me plonger dans un livre avec une histoire passionante pour faire passer le temps. J’essaie de lire un peu de tout : de la fantasy, des mangas ou des romans policiers par exemple.
-                </p>
-            </div>
-            
-        </div>
+        <img src="images/perso/cv.png">
     </section>
 </body>
 
 <footer>
     <p>
-        Mis à jour le : 09/06/2024
+        Mis à jour le : 09/11/2024
     </p>
 </footer>
 

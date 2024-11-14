@@ -1,0 +1,370 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin: auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+#bouton-principal {
+    width: fit-content;
+    align-self: center;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 20px;
+}
+
+#bouton-principal a {
+    text-decoration: none;
+    color: white;
+}
+
+#bouton-principal:hover {
+    background-color: #383E42;
+}
+
+hr:not(.vertical) {
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: black;
+    
+}
+
+
+
+/* accueil.html */
+
+.accueil {
+    text-align: center;
+}
+
+.accueil p {
+    width: 70%;
+    margin: auto;
+}
+
+.listProject {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.listProject div {
+    display: flex;
+    border: solid grey 2px;
+    border-radius:10px;
+    margin: 25px;
+    padding: 25px;
+    width: 700px;
+    max-height: 250px;
+}
+
+.listProject img {
+    padding:10px;
+    width: 400px;
+    height:200px;
+}
+
+.listProject div h2 {
+    padding:10px;
+}
+
+@media screen and (min-width: 1700px) {
+    .project2 {
+        position: relative;
+        top:100px;
+    }
+}
+
+
+
+
+/* contact.html */
+
+.main-contact-html {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.aside-contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    padding-left: 5%;
+    padding-right: 3%;
+}
+
+.reseaux img {
+    max-height: 50px;
+    width: auto;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 5%;
+    padding-right: 3%;
+}
+
+.formulaire form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire select, .formulaire input, .formulaire textarea {
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.formulaire textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    height: 150px;
+}
+
+.joindre {
+    width: fit-content;
+}
+
+.joindre i {
+    padding-right: 8px;
+}
+
+
+
+/* nous-connaitre.html */
+
+.apropos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.apropos img {
+    width:100%;
+}
+
+.apropos h1 {
+    position: absolute;
+    bottom:15%;
+    color: white;
+}
+
+.h2-connaitre {
+    text-align: center;
+    margin: auto;
+    margin: 50px 20px;
+}
+
+
+.missions {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+.listDirection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.listDirection div {
+    width: 20%;
+}
+
+.listDirection img {
+    width: 90%;
+}
+
+.listDirection h3 {
+    width: 90%;
+}
+
+.listPartenaires {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.listPartenaires div {
+    width: 20%;
+}
+
+.listPartenaires img {
+    width: 90%;
+}
+
+.listPartenaires h3 {
+    width: 90%;
+}
+
+
+.agences {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/* stage.html */
+
+.Candidature {
+    display: flex;
+}
+
+.candidature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* transition-ecologique.html */
+
+.transition {
+    display: flex;
+    flex-direction: row;
+}
+
+.transition img {
+    width: 300px;
+}
+
+.transition p {
+    margin-right: 50px;
+}
+
+.solutions {
+    display: flex;
+    flex-direction: row;
+}
+
+.actions-scc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.actions-scc div {
+    display: flex;
+    border: solid grey 2px;
+    border-radius:10px;
+    margin: 25px;
+    padding: 25px;
+}
+
+img.Recyclea{
+    width: 330px;
+    height: 100px;
+}
+
+
+
+/* services.html */
+
+.services-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-main div {
+    display: flex;
+    border: solid grey 2px;
+    border-radius:10px;
+    margin: 25px;
+    padding: 25px;
+}
+
+.services-main div div {
+    border: none;
+    margin: 0px;
+    display: block;
+}
+
+
+
+/* projets */
+
+.titre-projet {
+    text-align: center;
+}
+
+.projets {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+
+
+
+
+
+/* Mode sombre */
+
+body > input {
+    align-self: self-end;
+}
+
+#toggle {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: rgb(45, 45, 48);;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+  
+#toggle::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(253, 253, 253);
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: all 0.5s ease-in;
+}
+  
+#toggle:checked {
+    background: rgb(3, 255, 192);
+}
+  
+#toggle:checked::before {
+    background: rgb(45, 45, 48);;
+    left: 32px;
+}
+
+#toggle:checked ~ div{
+    background: rgb(45, 45, 48);
+    color: white;
+}
+

@@ -3,47 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <title>Hayot-IUT2</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/projet.css">
 <script src="script.js"></script>
 </head>
 
 <header>
-    <nav>
-        <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
-            <img id="darkmode" src="images/lune.png"><img>
-        </button>
-    
-        <div class="dropdown">
-            <button class="bouton">Projets</button>
-            <div class="dropdown-child">
-                <a href="sae1.03.html">S1.03</a>
-                <a href="sae1.04.html">S1.04</a>
-                <a href="sae1.0506.html">S1.0506</a>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+
+                </ul>
             </div>
-        </div>
-        
-        <a href="cv.html">CV</a>
-        <a href="contacts.html">Contacts</a>
-        <a href="index.html">Accueil</a>
-    </nav>
+        </li>       
+    </ul>
     
-    <h1> SAE S1.0506 </h1>
+    
 </header>
 
 <body class="projet-page">
+    <section class = "Title">
+        <h1>SCC Stage - Réalisation d'un site web </h1>
+    </section>
+    
     <section class="projet-pres">
-        <div>
-            <h2>SAE S1.0506 - 
-                Réalisation d'un site web
-                </h2>
-            <img src="images/s1.0506.png">
+        <div class="premiere-div">
+            <img src="images/sae1.0506/s1.0506.jpeg">
             <ul>
                 <li>Participants: Cyril Barthes, Axel Dufresne-Gonselin, Léa Garaix, Moi</li>
                 <li>Logiciels: Visual studio code, WordOnline, Whimsical, Git, Discord</li>
             </ul>
         </div>
-        <div class="sect">
+        <div class="paragraphe">
             <h3>Le but du projet</h3>
+            <p>-> <a href="documents/sae1.0506/scc-main/accueil.html" target="blank">Le site</a></p>
+            <p>-> <a href="documents/sae1.0506/D2-SCC-maquette.pdf" target="blank">Téléchargement wireframes</a></p>
             <h4>
                 PROBLEMATIQUE PRINCIPALE : Réalisation d'un site web à destination d'élèves de 3ème
             </h4>
@@ -59,148 +73,120 @@
         </div>
     </section>
 
-    <section class="travail">
-        
-        <div class="sect">
+    <section class="travail">    
+        <div class="paragraphe">
             <h3>Mon travail</h3>
-            
-            <div class="paragraphe">
-                <h4>Première étape :</h4>
-                <ul>
-                    <li>Rendu attendu pour le 22 octobre 2023:</li>
-                    <li>- Fichier pdf présentant le recueil de besoins</li>
-                </ul>
-                <p>Le fichier de recueil des besoins devait contenir deux grandes parties, une concernant l’entreprise et une concernant le transition numérique et écologique. La partie concernant l’entreprise se découpait elle-même en sept autres parties : ses activités et services, sa stratégie, son organisation, son financement, ses partenaires et clients, ses concurrents, et ses valeurs.</p>
-            </div>
-
-            <div class="paragraphe">
-                <p>Nous nous sommes répartis les tâches de façon plutôt égale. Personnellement, je me suis occupée de faire les recherches sur le site officiel de l’entreprise (SCC France) et de rédiger les parties concernant le financement et les valeurs de l’entreprise. Je me suis également penchée sur la partie de la transition écologique et numérique car celle-ci m’intéressait.</p>
-                <div class="photos">
-                    <figure>
-                        <img src="images/financement.png" class="photo">
-                        <figcaption>Financement</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/transition1.png" class="photo">
-                        <figcaption>Transition écologique partie 1</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/transition2.png" class="photo">
-                        <figcaption>Transition écologique partie 2</figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="paragraphe">
-                <h4>Deuxième étape :</h4>
-                <ul>
-                    <li>Rendu attendu pour le 15 décembre 2023 :</li>
-                    <li>- Wireframe du site sous forme pdf</li>
-                </ul>
-                <p>Pour cette deuxième phase, nous devions répondre aux besoins du client (mes notes ci-dessous) et réaliser le wireframe qui nous servirait de support pour le développement du site.</p>
-            </div>
-
-            <div class="paragraphe">
-                <p>Pour cette étape un de nos camarades était absent, nous avons donc travaillé à trois essentiellement. Nous avons décider de présenter sept pages pour notre site : une page d’accueil, une page avec les informations essentielles de l’entreprise,  une page sur la transition écologique, une page réservée aux élèves de troisième concernant leur stage, une page présentant les services, une page typique de présentation d’un projet, et enfin une page de contact sous forme de formulaire.</p>
-                <p>
-                    Nous avons fait environ deux pages chacun et je me suis occupée de faire la mise en page et le rendu du document. J’ai activement participé au wireframe en réalisant les pages concernant les élèves, la transition écologique et la page d’accueil. 
-                </p>
-                
-                <div class="photos">
-                    <figure>
-                        <img src="images/besoins.png" class="photo">
-                        <figcaption>Notes sur les besoins du client</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/wireframe1.png" class="photo">
-                        <figcaption>Wireframe page d'accueil</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/wireframe2.png" class="photo">
-                        <figcaption>Wireframe page transition écologique</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/wireframe3.png" class="photo">
-                        <figcaption>Wireframe page réservée aux élèves</figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="paragraphe">
-                <h4>Troisième étape :</h4>
-                <ul>
-                    <li>Rendu attendu pour la semaine du 22 janvier :</li>
-                    <li>- Dossier .zip contenant le site développé</li>
-                    
-                </ul>
-                <p>
-                    Cette étape était sûrement la plus dure du projet mais aussi la plus intéressante. Nous avons eu trois jours ouvrés pour développer le site en son ensemble. Nous avions pour consigne de développer un site léger, correspondant au wireframe en utilisant uniquement le langage html/css.
-                </p>
-            </div>
-
-            <div class="paragraphe">
-                <p>
-                    Nous nous sommes donc réparti les tâches en distinguant html et css. Ce n’était peut-être pas la meilleure idée, je pense que développer une page chacun aurait été plus instructif pour tout le monde néanmoins, pressés par le temps c’est le choix que nous avons fait. Ainsi notre camarade absent à l’étape précédente a fait un peu plus de css pour compenser.  On avait donc deux personnes sur le css et deux autres sur les pages html. Pour ma part j’ai surtout travaillé le contenu et la strucure des pages html, plus particulièrement les pages sur la transition numérique et cologique, celle dédiée aux élèves de troisième et la page de présentation de l’entreprise.
-                    Voici quelques photos du résultat final :
-                </p>
-                <div class="photos">
-                    <figure>
-                        <img src="images/scc1.png" class="photo">
-                        <figcaption>Page d'accueil</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/scc2.png" class="photo">
-                        <figcaption>Page présentant l'entreprise (thème sombre)</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/scc3.png" class="photo">
-                        <figcaption>Extrait de code de la page d'accueil</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/scc4.png" class="photo">
-                        <figcaption>Extrait de code de la page présentant l'entreprise</figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="paragraphe">
-                <h4>Quatrième étape :</h4>
-                <ul>
-                    <li>Rendus attendus pour la semaine du 22 janvier :</li>
-                    <li>- 3 Grilles d’autoévaluation</li>
-                    <li>- 2 oraux de groupe concernant le site</li>
-                </ul>
-            </div>
-
-            <div class="paragraphe">
-                <p>
-                    Nous nous sommes donc réparti les tâches en distinguant html et css. Ce n’était peut-être pas la meilleure idée, je pense que développer une page chacun aurait été plus instructif pour tout le monde néanmoins, pressés par le temps c’est le choix que nous avons fait. Ainsi notre camarade absent à l’étape précédente a fait un peu plus de css pour compenser.  On avait donc deux personnes sur le css et deux autres sur les pages html. Pour ma part j’ai surtout travaillé le contenu et la strucure des pages html, plus particulièrement les pages sur la transition numérique et cologique, celle dédiée aux élèves de troisième et la page de présentation de l’entreprise.
-                    Cette étape était la dernière étape concernant le projet S1.05-06. Elle consistait à réaliser un bilan global sur le déroulement du projet et notre travail durant celui-ci. Les grilles d’autoévaluation reprennent en grande partie ce que j’ai dit plus haut et concernaient en particulier la répartition du travail, je vous laisse un extrait de la grille principale ci-dessous. Quant aux oraux, l’un concernait justement ces grilles, chacun devait décrire son expérience, cela nous a permis à chacun de voir le point de vue des autres sur ce que l’on a fait ; l’autre était une présentation de notre site en cinq minutes, il fallait présenter quelques pages du site, montrer qu’il était fonctionnel et dire pourquoi il répondait aux besoins du client. 
-                </p>
-                <div class="photos">
-                    <figure>
-                        <img src="images/grille.png" class="photo">
-                        <figcaption>Extrait de grille d'autoévaluation</figcaption>
-                    </figure>
-                </div>
-            </div>
-
+            <h4>Première étape :</h4>
+            <ul>
+                <li>Rendu attendu pour le 22 octobre 2023:</li>
+                <li>- Fichier pdf présentant le recueil de besoins</li>
+            </ul>
+            <p>Le fichier de recueil des besoins devait contenir deux grandes parties, une concernant l’entreprise et une concernant le transition numérique et écologique. La partie concernant l’entreprise se découpait elle-même en sept autres parties : ses activités et services, sa stratégie, son organisation, son financement, ses partenaires et clients, ses concurrents, et ses valeurs.</p>
+            <p>Nous nous sommes répartis les tâches de façon plutôt égale. Personnellement, je me suis occupée de faire les recherches sur le site officiel de l’entreprise (SCC France) et de rédiger les parties concernant le financement et les valeurs de l’entreprise. Je me suis également penchée sur la partie de la transition écologique et numérique car celle-ci m’intéressait.</p>
         </div>
-    </section>
+        <div class="photos">
+            <figure>
+                <img src="images/sae1.0506/financement.png" class="photo">
+                <figcaption>Financement</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.0506/transition1.png" class="photo">
+                <figcaption>Transition écologique partie 1</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.0506/transition2.png" class="photo">
+                <figcaption>Transition écologique partie 2</figcaption>
+            </figure>
+        </div>
 
-    <section class="acquis">
-        <div class="sect">
-            <h3>Compétences acquises</h3>
+        <div class="paragraphe">
+            <h4>Deuxième étape :</h4>
+            <ul>
+                <li>Rendu attendu pour le 15 décembre 2023 :</li>
+                <li>- Wireframe du site sous forme pdf</li>
+            </ul>
+            <p>Pour cette deuxième phase, nous devions répondre aux besoins du client (mes notes ci-dessous) et réaliser le wireframe qui nous servirait de support pour le développement du site.</p>
+            <p>Pour cette étape un de nos camarades était absent, nous avons donc travaillé à trois essentiellement. Nous avons décider de présenter sept pages pour notre site : une page d’accueil, une page avec les informations essentielles de l’entreprise,  une page sur la transition écologique, une page réservée aux élèves de troisième concernant leur stage, une page présentant les services, une page typique de présentation d’un projet, et enfin une page de contact sous forme de formulaire.</p>
             <p>
-                J’ai beaucoup aimé travailler en groupe dans cette SAE, même si c’était un peu compliqué à certains moments, cela m’a aidé pour les projets en groupe qui ont suivi. J’ai appris beaucoup de choses sur la gestion d’entreprise et la transition écologique en travaillant sur le recueil de besoins. J’ai appris à utiliser Whimsical et à faire un wireframe ce qui m’a beaucoup plu. Enfin, j’ai pu améliorer mes compétences en html, mêmme si j’aurais bien aimé faire plus de css.
+                Nous avons fait environ deux pages chacun et je me suis occupée de faire la mise en page et le rendu du document. J’ai activement participé au wireframe en réalisant les pages concernant les élèves, la transition écologique et la page d’accueil. 
             </p>
+        </div>
+        <div class="photos">
+            <figure>
+                <img src="images/sae1.0506/besoins.png" class="photo">
+                <figcaption>Notes sur les besoins du client</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.0506/wireframe1.png" class="photo">
+                <figcaption>Wireframe page d'accueil</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.0506/wireframe2.png" class="photo">
+                <figcaption>Wireframe page transition écologique</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.0506/wireframe3.png" class="photo">
+                <figcaption>Wireframe page réservée aux élèves</figcaption>
+            </figure>
+        </div>
+
+        <div class="paragraphe">
+            <h4>Troisième étape :</h4>
+            <ul>
+                <li>Rendu attendu pour la semaine du 22 janvier :</li>
+                <li>- Dossier .zip contenant le site développé</li>       
+            </ul>
+            <p>
+                Cette étape était sûrement la plus dure du projet mais aussi la plus intéressante. Nous avons eu trois jours ouvrés pour développer le site en son ensemble. Nous avions pour consigne de développer un site léger, correspondant au wireframe en utilisant uniquement le langage html/css.
+            </p>
+            <p>
+                Nous nous sommes donc réparti les tâches en distinguant html et css. Ce n’était peut-être pas la meilleure idée, je pense que développer une page chacun aurait été plus instructif pour tout le monde néanmoins, pressés par le temps c’est le choix que nous avons fait. Ainsi notre camarade absent à l’étape précédente a fait un peu plus de css pour compenser.  On avait donc deux personnes sur le css et deux autres sur les pages html. Pour ma part j’ai surtout travaillé le contenu et la strucure des pages html, plus particulièrement les pages sur la transition numérique et cologique, celle dédiée aux élèves de troisième et la page de présentation de l’entreprise.
+                Voici quelques photos du résultat final :
+            </p>
+        </div>
+        <div class="photos">
+            <figure>
+                <img src="images/sae1.0506/scc1.png" class="photo">
+                <figcaption>Page d'accueil</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.0506/scc2.png" class="photo">
+                <figcaption>Page présentant l'entreprise (thème sombre)</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.0506/scc3.png" class="photo">
+                <figcaption>Extrait de code de la page d'accueil</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.0506/scc4.png" class="photo">
+                <figcaption>Extrait de code de la page présentant l'entreprise</figcaption>
+            </figure>
+        </div>
+
+        <div class="paragraphe">
+            <h4>Quatrième étape :</h4>
+            <ul>
+                <li>Rendus attendus pour la semaine du 22 janvier :</li>
+                <li>- 3 Grilles d’autoévaluation</li>
+                <li>- 2 oraux de groupe concernant le site</li>
+            </ul>
+            <p>
+                Nous nous sommes donc réparti les tâches en distinguant html et css. Ce n’était peut-être pas la meilleure idée, je pense que développer une page chacun aurait été plus instructif pour tout le monde néanmoins, pressés par le temps c’est le choix que nous avons fait. Ainsi notre camarade absent à l’étape précédente a fait un peu plus de css pour compenser.  On avait donc deux personnes sur le css et deux autres sur les pages html. Pour ma part j’ai surtout travaillé le contenu et la strucure des pages html, plus particulièrement les pages sur la transition numérique et cologique, celle dédiée aux élèves de troisième et la page de présentation de l’entreprise.
+                Cette étape était la dernière étape concernant le projet S1.05-06. Elle consistait à réaliser un bilan global sur le déroulement du projet et notre travail durant celui-ci. Les grilles d’autoévaluation reprennent en grande partie ce que j’ai dit plus haut et concernaient en particulier la répartition du travail, je vous laisse un extrait de la grille principale ci-dessous. Quant aux oraux, l’un concernait justement ces grilles, chacun devait décrire son expérience, cela nous a permis à chacun de voir le point de vue des autres sur ce que l’on a fait ; l’autre était une présentation de notre site en cinq minutes, il fallait présenter quelques pages du site, montrer qu’il était fonctionnel et dire pourquoi il répondait aux besoins du client. 
+            </p>
+        </div>
+        <div class="photos">
+            <figure>
+                <img src="images/sae1.0506/grille.png" class="photo">
+                <figcaption>Extrait de grille d'autoévaluation</figcaption>
+            </figure>
         </div>
     </section>
 </body>
 
 <footer>
     <p>
-        Mis à jour le : 09/06/2024
+        Mis à jour le : 09/11/2024
     </p>
 </footer>
 

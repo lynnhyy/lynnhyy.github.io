@@ -1,0 +1,269 @@
+
+@media (prefers-color-scheme: dark) {
+    :root{
+    
+    --border-color: rgb(238, 238, 238);
+    --border-perso:black;
+    --bg-perso:black;
+    --bg-accroche: rgb(1, 2, 66);
+    
+    --perso-shadow:none;
+    --accroche-shadow: white;
+    --acc-btn: silver;
+    --acc-btn-hov: white;
+
+    --button:black;
+    --button-bg:white;
+    --nb-color:black;
+    --dot:#bbb;
+    --dot-hover: #717171;
+
+    --projbg:black;
+    --projtitre:black;
+    --projborder:silver;
+}
+}
+[data-theme="light"] {
+
+--border-color: #010335;
+--border-perso:black;
+--bg-perso: rgb(185, 181, 181);
+--bg-accroche: #cfcfcf;
+
+--perso-shadow:none;
+--accroche-shadow: black;
+--acc-btn: silver;
+--acc-btn-hov: white;
+
+--button:black;
+--button-bg:white;
+--nb-color:black;
+--dot:#bbb;
+--dot-hover: #717171;
+
+--projbg:#a3d4f5;
+--projtitre:#a3d4f5;
+--projborder:rgb(148, 148, 148);
+
+}
+
+
+
+/*------------------------Accueil--------------------------*/
+
+.presentation{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 200px;
+    gap:100px;
+}
+
+.perso{
+    display:flex;
+    flex-direction: column;
+    background: var(--bg-perso);
+    border: solid var(--border-perso) 3px;
+    width:400px;
+    box-shadow:0 0 60px  var(--perso-shadow);
+
+}
+
+.perso ul{
+    list-style: none;
+    padding:20px;
+}
+
+.perso li{
+    padding:5px;
+}
+
+.accroche{
+    border-left: solid var(--border-color) 3px;
+    width:800px;
+    padding:50px;
+
+}
+
+.button-important{
+    color:var(--main-color);
+    background:var(--acc-btn);
+    width:200px;
+    height:50px;
+    border: solid 1px var(--acc-btn);
+    box-shadow: 0 0 10px  var(--accroche-shadow);
+    border-radius: 10px;
+    margin:10px 0 0 600px;
+}
+
+.button-important:hover {
+    background:var(--acc-btn-hov);
+
+}
+
+.button-important a{
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+    text-shadow: 3px 2px black;
+}
+
+
+/*--Slider--*/
+
+.slider {
+    box-sizing:border-box;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+#slide2, #slide3, #slide4, #slide5 {
+    display: none;
+}
+
+.pre, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 38%;
+    width: auto;
+    margin-top: 25px;
+    padding: 16px;
+    border-radius : 0 15px 15px 0;
+
+    color: var(--button);
+    background:var(--button-bg);
+    opacity:0.7;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.next {
+    right: 0px;
+    border-radius : 15px 0 0 15px;
+}
+
+.pre:hover, .next:hover {
+    background-color: var(--button-bg);
+    opacity:1;
+}
+
+.nb{
+    color: var(--nb-color);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: var(--dot) ;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: var(--dot-hover);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+/*-----------------------Projet-------------------------------*/
+
+
+.projet{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    border:var(--projborder) solid 3px;
+    background:var(--projbg);
+}
+
+.projet img{
+    min-width:600px;
+    height: 550px;
+}
+
+.projet p{
+    margin:50px;
+}
+
+.text {
+    background: var(--projtitre);
+    font-size: 35px;
+    padding: 8px 12px;
+    border: solid 3px var(--projborder);
+
+    position: absolute;
+    left: 50%;
+    top:0px;
+    transform: translate(-50%);
+    width: auto;
+    text-align: center;
+}
+
+.slide .button-important{
+    font-size: 30px;
+    position:absolute;
+    width:auto;
+    bottom: 20px;
+    right:20px;
+}
+
+/*------------------------cv---------------------------*/
+
+.sect {
+    width:600px;
+    padding:0 100px 0 100px;
+    margin:50px 0 0 0;
+    text-align: justify;
+    border: solid 1px var(--border-color);
+    background:var(--bg-travail);
+}
+
+.comp{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.comp div{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 325px;
+}
+
+.diplome{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    margin: 0 150px 0 150px;
+}
+
+.diplome p{
+    margin:0px;
+}
+.diplome h4{
+    margin:10px 0 0 0;
+}

@@ -1,0 +1,92 @@
+@media (prefers-color-scheme: dark) {
+    :root{
+
+        --background-color:#010018;
+        --headbg:rgba(0, 0, 0, 0.829);
+        --main-color:#f3f3f3;
+        --filter-logo:invert(100%);
+        --border-color : white;
+
+        --title1-color: #dedede;
+        --title1-shadow: 0 0 60px  white;
+        --title2-color:#f3f3f3;
+        --title3-color:#f3f3f3;
+    }
+
+    [data-theme="light"] {
+        
+        --background-color:#f1f1ff;
+        --headbg:url(/images/bannière\ officielle.png);
+        --main-color:#14121C;
+        --border-color : black;
+        --filter-logo:invert(0%);
+
+        --title1-color: black;
+        --title1-shadow: 0 0 60px  white;
+        --title2-color:#14121C;
+        --title3-color:black;
+    }
+}
+
+/*-----------------------Commun----------------------------*/
+
+
+body{
+    margin:0;
+    display:flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    gap:75px;
+
+
+    font-family: system-ui;
+    background:var(--background-color);
+    color: var(--main-color);
+    text-align:justify;
+    font-size:20px;
+}
+
+.Title{
+    background: var(--headbg);
+    display:block;
+    border:3px double var(--border-color); 
+    margin: 100px 400px 100px 400px;
+}
+
+
+h1{
+    font-family: system-ui;
+    margin: 50px 50px 30px 50px;
+    text-align: center;
+    font-size: 100px;
+    color: var(--title1-color);
+    text-shadow: 0px 0px 10px var(--title1-shadow);
+
+}
+
+h2{
+    font-family: system-ui;
+    text-align: center;
+    color:var(--title2-color);
+    font-size: 50px;
+    margin: 0 0 30px 0;
+}
+
+h3{
+    font-family: system-ui;
+    text-align: center;
+    color:var(--title3-color);
+    font-size: 40px;
+}
+
+h4{
+    font-family: system-ui;
+    text-align: left;
+    font-size: 30px;
+}
+.logo{
+    width:75px;
+    height:75px;
+    filter:var(--filter-logo);
+}

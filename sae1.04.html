@@ -3,47 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <title>Hayot-IUT2</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/projet.css">
 <script src="script.js"></script>
 </head>
 
 <header>
-    <nav>
-        <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
-            <img id="darkmode" src="images/lune.png"><img>
-        </button>
-    
-        <div class="dropdown">
-            <button class="bouton">Projets</button>
-            <div class="dropdown-child">
-                <a href="sae1.03.html">S1.03</a>
-                <a href="sae1.04.html">S1.04</a>
-                <a href="sae1.0506.html">S1.0506</a>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+
+                </ul>
             </div>
-        </div>
-        
-        <a href="cv.html">CV</a>
-        <a href="contacts.html">Contacts</a>
-        <a href="index.html">Accueil</a>
-    </nav>
+        </li>       
+    </ul>
     
-    <h1> SAE S1.04 </h1>
+    
 </header>
 
 <body class="projet-page">
+    <section class = "Title">
+        <h1> Etude de données : le Titanic </h1>   
+    </section>
     <section class="projet-pres">
-        <div>
-            <h2>SAE S1.04 - 
-                Etude de données sur le Titanic
-                </h2>
-            <img src="images/titanic.png">
+        <div class="premiere-div">
+            <img src="images/sae1.04/titanic.png">
             <ul>
                 <li>Participants: Léa Garaix, moi</li>
                 <li>Logiciels: PostgreSQL, AnalyseSI, LibreOffice, WordOnline, Discord</li>
             </ul>
         </div>
-        <div class="sect">
+        <div class="paragraphe">
             <h3>Le but du projet</h3>
+            <p>-> <a href="documents/sae1.04/" target="blank">Téléchargement</a></p>
             <h4>
                 PROBLEMATIQUE PRINCIPALE : Facteurs ayant influencé la survie d'un passager
             </h4>
@@ -59,118 +71,104 @@
                 <li>- Fichier dont les onglets rassemblent respectivement des informations sur les passagers, les domestiques de certains passagers et les embarcations de sauvetage équipant le paquebot</li>
             </ul>
         </div>
+
+
     </section>
 
     <section class="travail">
         
-        <div class="sect">
+        <div class="paragraphe">
             <h3>Mon travail</h3>
-            
-            <div class="paragraphe">
-                <h4>Première étape :</h4>
-                <ul>
-                    <li>Rendus attendus pour le 12 décembre 2023 :</li>
-                    <li>Un document (LibreOfficeWriter enregistré en pdf) contenant :</li>
-                    <li>- Une présentation synthétique de l'organisation du sauvetage et la justification de l'impossibilité logistique d'envisager de sauver davantage de passagers (au moins 1 page)</li>
-                    <li>- Le SEA documenté modélisant les données fournies</li>
-                    <li>- Un ensemble de règles de gestion organisées (RG)</li>
-                    <li>- Conclusion exprimant en quoi une BD dont le schéma serait dérivé de ce SEA permettrait de répondre à la problématique.</li>
-                </ul>
-                <p>On a comméncé par découvrir la base de données et  faire des recherches sur le Titanic chacune de notre côté en se servant de la webographie, tout en complétant par nos propres recherches, sur d’autres sites.</p>
-            </div>
+            <h4>Première étape :</h4>
+            <ul>
+                <li>Rendus attendus pour le 12 décembre 2023 :</li>
+                <li>Un document (LibreOfficeWriter enregistré en pdf) contenant :</li>
+                <li>- Une présentation synthétique de l'organisation du sauvetage et la justification de l'impossibilité logistique d'envisager de sauver davantage de passagers (au moins 1 page)</li>
+                <li>- Le SEA documenté modélisant les données fournies</li>
+                <li>- Un ensemble de règles de gestion organisées (RG)</li>
+                <li>- Conclusion exprimant en quoi une BD dont le schéma serait dérivé de ce SEA permettrait de répondre à la problématique.</li>
+            </ul>
+            <p>On a comméncé par découvrir la base de données et  faire des recherches sur le Titanic chacune de notre côté en se servant de la webographie, tout en complétant par nos propres recherches, sur d’autres sites.</p>
 
-            <div class="paragraphe">
-                <p>Ma collègue Léa s’est occupée d’écrire le compte-rendu sur l’histoire du Titanic à partir de ces recherches mises en commun et de mettre en page le document final. On a décidé des règles de gestion ensemble pour éviter tout malentendu dans la suite du projet. Pour ma part je me suis chargée de réaliser le SEA ci-contre à l’aide d’un logiciel.  J’ai également justifier mes choix de modélisation dans le document final (ensuite relus et complétés par ma collègue).</p>
-                <div class="photos">
-                    <figure>
-                        <img src="images/sea.png" class="photo">
-                        <figcaption>SEA</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/sea_just.png" class="photo">
-                        <figcaption>Justifications</figcaption>
-                    </figure>
-                </div>
-            </div>
+            <p>Ma collègue Léa s’est occupée d’écrire le compte-rendu sur l’histoire du Titanic à partir de ces recherches mises en commun et de mettre en page le document final. On a décidé des règles de gestion ensemble pour éviter tout malentendu dans la suite du projet. Pour ma part je me suis chargée de réaliser le SEA ci-contre à l’aide d’un logiciel.  J’ai également justifier mes choix de modélisation dans le document final (ensuite relus et complétés par ma collègue).</p>
+        </div> 
 
-            <div class="paragraphe">
-                <h4>Deuxième étape :</h4>
-                <ul>
-                    <li>Rendus attendus pour le 21 décembre 2023 :</li>
-                    <li> Un document pdf : schéma du modèle relationnel dérivé de la correction du SEA</li>
-                    <li>- Fichier sql du script de création de la BD</li>
-                    <li>- Fichier sql du script de suppression de la BD</li>
-                    <li>- Fichier sql du script testconfo_login.sql</li>
-                    <li>- Fichier sql du script de testinfo_Login.sql</li>
-                </ul>
-                <p>La seconde étape consistait à réaliser la base de données en fonction du SEA et la remplir avec le fichier de données fourni.</p>
-            </div>
-
-            <div class="paragraphe">
-                <p>Ma collègue s’est beaucoup occupée de la justification du SEA et du fichier testinfo.sql, tandis que j’ai créé la table et son fichier de suppression. Ensuite, j’ai écrit et commenté 38 tests permettant de vérifier que toutes les contraintes concernant les tables fonctionnaient correctement. Cette fois encore, ma collègue a fait la mise en page du document. Voici quelques extraits de code :
-                </p>
-                <div class="photos">
-                    <figure>
-                        <img src="images/tables-created.png" class="photo">
-                        <figcaption>Extrait de la création de la table</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/suppr-tables.png" class="photo">
-                        <figcaption>Fichier de suppression</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/tests-requetes2.png" class="photo">
-                        <figcaption>Extrait de tests</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/tests-requetes3.png" class="photo">
-                        <figcaption>Extrait de tests</figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="paragraphe">
-                <h4>Troisième étape :</h4>
-                <ul>
-                    <li>Rendus attenudus  pour le 11 janvier 2024 :</li>
-                    <li>- Un document pdf des requêtes imposées</li>
-                    <li>- Fichier sql (code et résultat) et des requêtes complémentaires qui nous semble pertinentes</li>
-                    <li>- Notre bilan global de la SAE</li>
-                </ul>
-                <p>Cette étape était la dernière de la SAE on a donc du faire les requêtes imposées dans les consignes, plus quelques autres pour pouvoir répondre à la problématique et trouver les facteurs ayant influencé la survie d'un passager.</p> 
-            </div>
-
-            <div class="paragraphe">
-                <p>Pour cette partie, nous nous sommes réparti les requêtes à réaliser et à commenter (celles-ci étaient déjà réparties en 3 parties, on a donc chacune fait une partie et demi).  Je me suis chargée de la mise en page et de rédiger la conclusion. Voici un extrait du code et notre conclusion :</p>
-                <div class="photos">
-                    <figure>
-                        <img src="images/requete.png" class="photo">
-                        <figcaption>Exemple de requête 1</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/requete2.png" class="photo">
-                        <figcaption>Exemple de requête 2</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/conclusions.png" class="photo">
-                        <figcaption>Conclusion</figcaption>
-                    </figure>
-                </div>
-            </div>
+        <div class="photos">
+            <figure>
+                <img src="images/sae1.04/sea.png" class="photo">
+                <figcaption>SEA</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.04/sea_just.png" class="photo">
+                <figcaption>Justifications</figcaption>
+            </figure>
         </div>
-    </section>
 
-    <section class="acquis">
-        <div class="sect">
-            <h3>Compétences acquises</h3>
-            <p>Dans cette SAE j’ai beaucoup développé mes compétence en SQL grâce à la création de la table et aux requêtes qui demandaient plus de réflexion qu’en cours. J’ai également acquis plus de rigueur en pensant aux différents cas pouvant causer des erreurs et en réalisant les tests correspondants. Enfin, j’ai appris à utiliser pour la première fois un logiciel de modélisation pour le SEA.</p>
+        <div class="paragraphe">
+            <h4>Deuxième étape :</h4>
+            <ul>
+                <li>Rendus attendus pour le 21 décembre 2023 :</li>
+                <li> Un document pdf : schéma du modèle relationnel dérivé de la correction du SEA</li>
+                <li>- Fichier sql du script de création de la BD</li>
+                <li>- Fichier sql du script de suppression de la BD</li>
+                <li>- Fichier sql du script testconfo_login.sql</li>
+                <li>- Fichier sql du script de testinfo_Login.sql</li>
+            </ul>
+            <p>La seconde étape consistait à réaliser la base de données en fonction du SEA et la remplir avec le fichier de données fourni.</p>
+
+            <p>Ma collègue s’est beaucoup occupée de la justification du SEA et du fichier testinfo.sql, tandis que j’ai créé la table et son fichier de suppression. Ensuite, j’ai écrit et commenté 38 tests permettant de vérifier que toutes les contraintes concernant les tables fonctionnaient correctement. Cette fois encore, ma collègue a fait la mise en page du document. Voici quelques extraits de code :
+            </p>
+        </div>
+        <div class="photos">
+            <figure>
+                <img src="images/sae1.04/tables-created.png" class="photo">
+                <figcaption>Extrait de la création de la table</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.04/suppr-tables.png" class="photo">
+                <figcaption>Fichier de suppression</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.04/tests-requetes2.png" class="photo">
+                <figcaption>Extrait de tests</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.04/tests-requetes3.png" class="photo">
+                <figcaption>Extrait de tests</figcaption>
+            </figure>
+        </div>
+
+        <div class="paragraphe">
+            <h4>Troisième étape :</h4>
+            <ul>
+                <li>Rendus attenudus  pour le 11 janvier 2024 :</li>
+                <li>- Un document pdf des requêtes imposées</li>
+                <li>- Fichier sql (code et résultat) et des requêtes complémentaires qui nous semble pertinentes</li>
+                <li>- Notre bilan global de la SAE</li>
+            </ul>
+            <p>Cette étape était la dernière de la SAE on a donc du faire les requêtes imposées dans les consignes, plus quelques autres pour pouvoir répondre à la problématique et trouver les facteurs ayant influencé la survie d'un passager.</p> 
+            <p>Pour cette partie, nous nous sommes réparti les requêtes à réaliser et à commenter (celles-ci étaient déjà réparties en 3 parties, on a donc chacune fait une partie et demi).  Je me suis chargée de la mise en page et de rédiger la conclusion. Voici un extrait du code et notre conclusion :</p>
+        </div>     
+        <div class="photos">
+            <figure>
+                <img src="images/sae1.04/requete.png" class="photo">
+                <figcaption>Exemple de requête 1</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.04/requete2.png" class="photo">
+                <figcaption>Exemple de requête 2</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae1.04/conclusions.png" class="photo">
+                <figcaption>Conclusion</figcaption>
+            </figure>
         </div>
     </section>
 </body>
 
 <footer>
     <p>
-        Mis à jour le : 09/06/2024
+        Mis à jour le : 09/11/2024
     </p>
 </footer>
 

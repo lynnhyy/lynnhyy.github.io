@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Hayot-IUT2</title>
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/projet.css">
+<script src="script.js"></script>
+</head>
+<header>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+
+                </ul>
+            </div>
+        </li>       
+    </ul>
+    
+    
+</header>
+</header>
+
+<body class="projet-page">
+    <section class = "Title">
+        <h1> Etude de données : le Nutriscore</h1>
+    </section>
+
+    <section class="projet-pres">
+        <div class="premiere-div">
+            <img src="images/sae2.04/sae2.04.jpeg">
+            <ul>
+                <li>Participants: Léo Ducruet, Moi</li>
+                <li>Logiciels: Shell Linux, PostgreSQL, RStudio</li>
+                <li>Temps : 4h par semaine sur 3 semaines</li>
+            </ul>
+        </div>
+        <div class="paragraphe">
+            <h3>Le but du projet</h3>
+            <p>-> <a href="documents/sae2.04/" target="blank">Téléchargement</a></p>
+            <h4>
+                PROBLEMATIQUE PRINCIPALE : Réalisation d’un guide d’installation rédigé en Anglais d'un serveur Debian 11 équipé d'Apache, PostgreSQL et PHP
+            </h4>
+            <p>
+                Nous devions parcourir et trier une base de données fournie pour répondre à une problématique. L'objectif final était de produire plusieurs graphes sur RStudio permettant de répondre à la problématique et rédiger un rapport en anglais sur ce problème.
+            </p>
+
+            <h4>
+                DONNEES ET SOURCES A DISPOSITION
+            </h4>
+            <ul>
+                <li>- Base de données</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="travail">
+        
+        <div class="paragraphe">
+            <h3>Mon travail</h3>
+            <ul>
+                <p>Rendus attendus :</p>
+                <li>- Une base de données nettoyée en fonction du sujet </li>
+                <li>- Un dossier gestion de projet</li>
+                <li>- Une liste de graphiques produits sur RStudio, extraits de la base de données afin de répondre au sujet</li>
+            </ul>
+            <h4>Première étape : Tri de la base de données</h4>
+            <p>L’objectif de la première phase était de créer une nouvelle base de données à partir de la base de données fournie.
+            </p>
+            <p>La base de données nous fournissait les données sur les produits alimentaires vendus avec un nutriscore. Nous devions retrouver les produits français transformés et supprimer les valeurs incorrectes.
+            </p>
+            <p>
+                Nous avons utilisé PostgreSQL pour explorer et trier la base de données afin de répondre au sujet.
+                Nous ne voulions garder que le nécessaire pour répondre à notre problématique et supprimer les valeurs incorrectes (par exemple des valeurs négatives pour un code barre). Nous avions une liste de conditions à vérifier.
+            </p>
+            <p>
+                A la fin nous avions créé une nouvelle base triée avec uniquement des valeurs valides et les produits pouvant nous intéresser. 
+            </p>
+            
+            <h2>Ma part du travail :</h2>
+            <p>
+            Pour couvrir toutes les conditions, nous nous sommes réparti les commandes à réaliser sur SQL, et les avons toutes vérifiées individuellement. Nous avons donc tous deux participé activement à cette mission.
+            </p> 
+        </div>
+        
+
+        <div class="paragraphe">
+            <h4>Deuxième étape : Réalisation des graphes</h4>
+            <p>
+                Pour cette phase, on nous a fourni la base de donnée triée que nous étions censé obtenir à la fin de la première phase afin d’éviter les problèmes concernant les valeurs incorrectes. Nous avons tout de même comparé avec la base de données que nous avions obtenue lors de la première phase et celle-ci était similaire à un détail près.
+            </p>
+            <p>
+                L’objectif de la seconde et dernière phase du projet était de fournir un bilan en anglais avec des graphes  sur le calcul du nutriscore sur notre type de produit. Nous avons au final réussi à réaliser 5 graphes montrant les nutriscores selon les composants de nos produits. Le bilan en anglais et les graphes ont été réaliser sur Rstudio. 
+            </p>   
+            <h2>Ma part du travail :</h2>
+            <p>
+                Sur cette phase nous avons tous deux réalisé les graphes ensemble sur le même écran. Pour ce qui est de la rédaction, on s’est réparti équitablement le travail à faire puis nous avons tous les deux relu pour vérifier qu’il n’y avait pas de faute dans le document.</p>  
+        </div>
+
+        <div class="photos">
+            <figure>
+                <img src="images/sae2.04/graphe1.png" class="photo">
+                <figcaption>graphe 1</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.04/graphe2.png" class="photo">
+                <figcaption>graphe 2</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sae2.04/tableau1.png" class="photo">
+                <figcaption>extrat de la base de données</figcaption>
+            </figure>
+            
+        </div>
+        
+    </section>
+</body>
+
+<footer>
+
+    Mis à jour le : 12/11/2024
+
+</footer>
+
+</html>

@@ -1,0 +1,16 @@
+/*-------------------------cv---------------------*/
+
+.cv section{
+    gap:100px;
+    align-items: center;
+    text-align:center;
+    font-size:40px;
+}
+
+.date{
+    color:grey;
+}
+
+.cv ul {
+    list-style: none;
+}

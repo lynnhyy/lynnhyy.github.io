@@ -2,104 +2,148 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Hayot-IUT2</title>
-<link rel="stylesheet" href="style.css">
+<title>Hayot-Portfolio</title>
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/accueil.css">
 <script src="script.js"></script>
 
 </head>
 
 <header>
-    <nav>
-        <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
-            <img id="darkmode" src="images/lune.png"><img>
-        </button>
-    
-        <div class="dropdown">
-            <button class="bouton">Projets</button>
-            <div class="dropdown-child">
-                <a href="sae1.03.html">S1.03</a>
-                <a href="sae1.04.html">S1.04</a>
-                <a href="sae1.0506.html">S1.0506</a>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+
+                </ul>
             </div>
-        </div>
-        
-        <a href="cv.html">CV</a>
-        <a href="contacts.html">Contacts</a>
-        <a href="index.html">Accueil</a>
-    </nav>
+        </li>       
+    </ul>
     
-    <h1> Bienvenue </h1>
+    
 </header>
+    
 
 <body id="body" class="accueil">
+    <section class = "Title">
+        <h1> Lynn Hayot </h1>
+        <h2>- Etudiante en informatique -</h2>
+    </section>
     <section class="presentation">
         <div class="perso">
-            <img src="images/image-perso.jpg" alt="image-perso">
+            <img src="images/perso/image-perso.jpg" alt="image-perso">
 
             <ul>
                 <li>Nom : HAYOT</li>
-                <li>Prénom : Jade</li>
+                <li>Prénom : Lynn / Jade (en changement)</li>
                 <li>Age : 19 ans</li>
                 <li>Permis B</li>
-                <li>Adresse : 17 Rue Colonel Manhès, St Martin d'Hères</li>
             </ul>
         </div>
 
         <div class="accroche">
+
             <h2>A propos de moi</h2>
             <p>
                 Bienvenue sur ce portfolio réalisé et développé par mes soins.
             </p>
             <p>
-                Actuellement, étudiante en BUT informatique à l’IUT 2 de Grenoble, j’envisage de m’orienter dans le développement, et plus particulièrement dans le jeu vidéo. J’aimerais beaucoup gagner de l’expérience à travers des stages dans le domaine informatique. Je suis quelqu’un de motivé et d’intéressé par le développement et les nouvelles technologies.
+                Actuellement, étudiante en BUT informatique à l’IUT 2 de Grenoble, j’envisage de m’orienter dans le développement back-end, et plus particulièrement dans le jeu vidéo. Je suis intéressée par tout ce qui touche à l'informatique et qui pourrait me permettre de gagner de l'expérience dans le domaine.
             </p>
             <p>
-                Ce portfolio a pour but de vous présenter les différents projets que j’ai mené pendant mes études. N’hésitez pas à me contacter pour toute information complémentaire ou proposition de stage.
+                Ce portfolio a pour but de vous présenter les différents projets que j’ai mené pendant mes études. N’hésitez pas à me contacter pour toute information complémentaire ou proposition de rendez-vous.
             </p>
             <button class="button-important"><a href="contacts.html">Me contacter</a></button>
         </div>
     </section>
 
     <section id="projets">
+
         <h2>Mes projets</h2>
+
         <div class="slider">
 
             <!-- Slides projet -->
             
             <div class="slide fade" id="slide1">
-                <div class="nb">1 / 3</div>
+                <div class="nb">1 / 5</div>
                 <div class="projet">
-                    <img src="images/s1.03.png">
+                    <img src="images/sae1.03/s1.03.jpeg">
                     <p>
                         Nous avions deux heures pour suivre des instructions nous apprenant à installer le système d’exploitation Debian 11, avec environnement graphique, sur une machine virtuelle. Les rendus demandés étaient des captures d’écran de notre avancée à des endroit particuliers, par exemple à la création du nom d’utilisateur ou encore lors de l’installation d’un logiciel...
                     </p>
                 </div>
-                <div class="text">SAE S1.03</div>
+                <div class="text">Installation d'une machine client</div>
                 <button class="button-important"><a href="sae1.03.html">En savoir plus</a></button>
             </div>
           
             <div class="slide fade" id="slide2">
-                <div class="nb">2 / 3</div>
+                <div class="nb">2 / 5</div>
                 <div class="projet">
-                    <img src="images/titanic.png">
+                    <img src="images/sae1.04/titanic.png">
                     <p>
                         Nous devions modéliser, puis implémenter une base de données et la remplir avec des données que nous nous avions mises à disposition. Nous avions pour objectif d’interroger cette base de données avec des requêtes SQL pour répondre à la problématique...
                     </p>
                 </div>
-                <div class="text">SAE S1.04</div>
+                <div class="text">Etude de données : le Titanic</div>
                 <button class="button-important"><a href="sae1.04.html">En savoir plus</a></button>
             </div>
           
             <div class="slide fade" id="slide3">
-                <div class="nb">3 / 3</div>
+                <div class="nb">3 / 5</div>
                 <div class="projet">
-                    <img src="images/s1.0506.png">
+                    <img src="images/sae1.0506/s1.0506.jpeg">
                     <p>
                         Le but de cette SAE était de créer un site web destiné à des élèves de 3ème recherchant un stage en entreprise. Il fallait donc bien connaître l’entreprise cible du site web, penser à adapter son vocabulaire pour les élèves et bien entendu répondre aux demandes spécifiques du client concernant l’esthétique du site. Cette SAE s’est donc déroulée en quatre étapes...
                     </p>
                 </div>
-                <div class="text">SAE S1.0506</div>
+                <div class="text">SCC Stage - Réalisation d'un site web</div>
                 <button class="button-important"><a href="sae1.0506.html">En savoir plus</a></button>
+            </div>
+
+            <div class="slide fade" id="slide4">
+                <div class="nb">4 / 5</div>
+                <div class="projet">
+                    <img src="images/sae2.03/sae2.03.jpeg">
+                    <p>
+                        Il nous a été demandé d’installer Debian 12 sur une une machine, sans environnement graphique.
+                        De plus, il nous fallait installer et configurer les logiciels Apache, PostgreSQL et PHP.
+                        Le but final du projet était de réaliser un guide d’installation détaillé de Debian et de ces logiciels en anglais...
+                    </p>
+                </div>
+                <div class="text">Installation d'une machine serveur</div>
+                <button class="button-important"><a href="sae2.03.html">En savoir plus</a></button>
+            </div>
+
+            <div class="slide fade" id="slide5">
+                <div class="nb">5 / 5</div>
+                <div class="projet">
+                    <img src="images/sae2.04/sae2.04.jpeg">
+                    <p>
+                        Nous devions parcourir et trier une base de données fournie pour répondre à une problématique. L'objectif final était de produire plusieurs graphes sur RStudio permettant de répondre à la problématique et rédiger un rapport en anglais sur ce problème...
+                    </p>
+                </div>
+                <div class="text">Etude de données : le Nutriscore</div>
+                <button class="button-important"><a href="sae2.04.html">En savoir plus</a></button>
             </div>
           
             <!-- Boutons -->
@@ -113,13 +157,126 @@
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
+    </section>
+
+    <h2>Mon Parcours</h2>
+    <section class="diplome">
+
+        <div class="sect">
+            <h3>Formation</h3>
+            <div>  
+                <h4>BUT Informatique 2023 - 2026 (2ème année)</h4>
+                <p class="lieu">IUT2, UGA, Grenoble(38)</p>
+            </div>
+            <div>
+                <h4>Baccalauréat 2020 - 2023</h4>
+                <p class="lieu">Lycée Aiguerande, Belleville-sur-Saône (69)</p>
+                <ul>
+                    <li>Mention Bien</li>
+                    <li>Spécialités : Maths - Numérique et Sciences Informatiques - (LLCE Anglais)</li>
+                    <li>Options : Maths Expertes et Bachibac</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sect">
+            <h3>Expériences professionnelles</h3>
+            <div>
+                <h4>CDI - Temps partiel - Garde d'enfants</h4>
+                <p class="lieu">septembre 2024 - Les services de Louise et Martin</p>
+                <p>Surveiller de jeunes enfants et assurer les déplacements de l’école à la maison.</p>
+                <h4>Stage d'observation</h4>
+                <p class="lieu">Janvier 2020 Naelan Lyon</p>
+                <p>Stage d'observation de 5 jours en 3ème</p>
+                <p>Observation du développement d’un logiciel de bureautique sous différents angles : marketing et développement.
+                </p>
+            </div>
+
+        </div>
+    
+        <div class="sect">
+            <h3>Compétences techniques</h3>
+            <div class="comp">
+                <div>
+                    <h4>Back-end</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>JavaFX</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                        <li>PostgreSQL / MySQL</li>
+                    </ul>   
+                </div>
+                <div>
+                    <h4>Front-end</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                    </ul>   
+                </div>
+            
+                <div>
+                    <h4>Gestion de projet</h4>
+                    <ul>
+                        <li>Git</li>
+                        <li>UML</li>
+                        <li>BPMN</li>
+                        <li>Personas/User Story</li>
+                        <li>Diagrammes de séquence / cas d'utilisation</li>
+                    </ul>   
+                </div>
+                <div>
+                    <h4>Langues et OS</h4>
+                    <ul>
+                        <li>Anglais - B2</li>
+                        <li>Espagnol - C1</li>
+                        <li>Linux (Debian /Ubuntu)</li>
+                        <li>Windows</li>
+                    </ul>   
+                </div>
+            </div>
+        </div>
+        <div class="sect">
+            <h3>Compétences</h3>
+            <div>
+                <h4>Réaliser un développement d’application</h4>
+                <p>Implémenter des conceptions simples</p>
+                <p>Développer des interfaces utilisateurs</p>
+                <h4>Gérer des données de l’information</h4>
+                <p>Mettre à jour et interroger une base de données relationnelle</p>
+                <p>Visualiser des données</p>
+                <h4>Conduire un projet</h4>
+                <p>Appréhender les besoins du client et de l’utilisateur</p>
+                <p>Mettre en place les outils de gestion de projet</p>
+                <h4>Compétences humaines</h4>
+                <p>Ouverte d’esprit</p>
+                <p>Organisée</p>
+            </div>
+
+        </div>
+        <div class="sect">
+            <h3>Centres d'intérêt</h3>
+            <div>
+                <h4>Culture japonaise</h4>
+                <h4>Sports</h4>
+                <p>- Ninjutsu en club</p>
+                <p>- VolleyBall en AS</p>
+                <h4>Jeux vidéo</h4>
+                <p>- OpenWorld</p>
+                <p>- RPG</p>
+            </div>
+        </div>
     </section>
 </body>
 
 <footer>
 <p>
-    Mis à jour le : 09/06/2024
+    Mis à jour le : 12/11/2024
 </p>
 </footer>
 </html>

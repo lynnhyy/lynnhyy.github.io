@@ -1,0 +1,137 @@
+/*Changement de la couleur*/
+
+@media (prefers-color-scheme: dark) {
+    :root{
+
+        /*----header---*/
+        --a-color: rgb(113, 234, 255);
+        --abg:black;
+        --abg-hover:#9b9b9b;
+        --filter-button: invert(100%);
+        
+        /*------Footer-------*/
+        --border-footer:white;
+    }
+}
+    [data-theme="light"] { 
+
+    /*----header---*/
+    --a-color: rgb(113, 234, 255);
+    --abg:black;
+    --abg-hover:#9b9b9b;
+    --filter-button: invert(0%);
+
+    /*------Footer-------*/
+    --border-footer:white;
+}
+
+
+
+/*-------------------------------Header-----------------------------*/
+
+header {
+    position : relative;
+    display : flex;
+    justify-content: space-between;
+}
+
+
+/*----Changement thème----*/
+header button{
+    width:150px;
+    float : left;
+    background : none;
+    border:none;
+    cursor: pointer;
+}
+
+button img{
+    width:100px;
+    filter: var(--filter-button);
+}
+
+/*------navbar------*/
+
+header > ul {
+    display:table;
+    margin:0;
+}
+
+header > button{
+    height : 60px;
+
+}
+
+header >ul >li{
+    display : table-cell;
+}
+
+header li{
+    background-color: var(--abg);
+    list-style: none;
+    display: inline-block;
+    padding : 10px;
+    margin:0;
+}
+
+header a {
+    font-family: system-ui;
+    font-size: 20px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--a-color);
+    float:right;
+
+    height : 36px;
+    width:150px;
+}
+
+header  li:hover{
+    background: var(--abg-hover);
+}
+
+/*--Dropdown--*/
+
+.dropdown {
+    cursor: pointer;
+    background:black;
+}
+
+.bouton { 
+    line-height: 45px;
+    color: var(--a-color);
+    font-family: system-ui;
+    font-size: 20px;
+}
+
+.dropdown .dropdown-ul{
+    display :none;
+    padding:0;
+}
+.dropdown:hover div{
+    position: absolute;
+    top: 100%;
+    right:0px;
+    background-color: black;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-ul{
+    display :table-row;
+}
+
+
+.dropdown:hover .dropdown-cell a{
+    display :table-cell;
+    height : 56px;
+    width : 250px;
+}
+
+/*-----------------------Footer---------------------------*/
+
+footer{
+    border-top:  solid var(--border-footer) 1px;
+    padding: 20px;
+    padding-left: 50px;
+}

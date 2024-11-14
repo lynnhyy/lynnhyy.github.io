@@ -3,52 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <title>Hayot-IUT2</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/contact.css">
 <script src="script.js"></script>
 </head>
-
 <header>
-    <nav>
-        <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
-            <img id="darkmode" src="images/lune.png"><img>
-        </button>
-    
-        <div class="dropdown">
-            <button class="bouton">Projets</button>
-            <div class="dropdown-child">
-                <a href="sae1.03.html">S1.03</a>
-                <a href="sae1.04.html">S1.04</a>
-                <a href="sae1.0506.html">S1.0506</a>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+
+                </ul>
             </div>
-        </div>
-        
-        <a href="cv.html">CV</a>
-        <a href="contacts.html">Contacts</a>
-        <a href="index.html">Accueil</a>
-    </nav>
+        </li>       
+    </ul>
     
-    <h1> Contacts </h1>
+    
 </header>
 
 <body class="contacts">
 
+    <section class = "Title">
+        <h1> Contacts </h1>
+    </section>
+
     <section id="suite-contacts">
-        <img src="images/image-perso.jpg" id="avatar">
+        <img src="images/perso/image-perso.jpg" id="avatar">
         <div class="contener">
-            <img class="logo" src="images/mail-removebg-preview.png">
+            <img class="logo" src="images/icones/mail-removebg-preview.png">
             <h>jade.hayot(.at)etu.univ-grenobles-alpes.fr</h>
         </div>
         <div class="contener">
-            <img class="logo" src="images/telephone-removebg-preview.png">
+            <img class="logo" src="images/icones/telephone-removebg-preview.png">
             <h>06 60 79 37 13</h>
         </div>
         <div class="contener">
-            <img class="logo" src="images/linkedin-removebg-preview.png">
-            <h>www.linkedin.com/in/jade-hayot-
-                a386852b2</h>
-        </div>
-        <div class="contener">
-            <img class="logo" src="images/maison-removebg-preview.png">
+            <img class="logo" src="images/icones/maison-removebg-preview.png">
             <h>17 Rue Colonel Manhès, 38400 Saint-Martin d'Hères</h>
         </div>
     </section>

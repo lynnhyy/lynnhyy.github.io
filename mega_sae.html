@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Hayot-IUT2</title>
+<link rel="stylesheet" href="stylesheet/header.css">
+<link rel="stylesheet" href="stylesheet/commun.css">
+<link rel="stylesheet" href="stylesheet/projet.css">
+<script src="script.js"></script>
+</head>
+<header>
+    <button id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+        <img id="darkmode" src="images/icones/lune.png"><img>
+    </button>
+    <ul class="navbar">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+           
+        <li class="dropdown">
+            <button class="bouton">Projets</button> 
+            <div class = dropdown>       
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.03.html">Installation d'une machine client</a></li>
+                    <li class="dropdown-cell"><a href="sae2.03.html">Installation d'une machine serveur</a></li>
+                    
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.04.html">Etude de données : le Titanic</a></li>
+                    <li class="dropdown-cell"><a href="sae2.04.html">Etude de données : le Nutriscore</a></li>
+                </ul>
+                <ul class="dropdown-ul">
+                    <li class="dropdown-cell"><a href="sae1.0506.html">SCC Stage - Réalisation d'un site web</a></li>
+                    <li class="dropdown-cell"><a href="mega_sae.html">PEP - Application de gestion d'évènements</a></li>
+                </ul>
+            </div>
+        </li>       
+    </ul>
+    
+ </header>   
+
+<body class="projet-page">
+    <section class = "Title">
+        <h1> ProEventPlanner - Application de gestion d'évènements</h1>
+    </section>
+
+    <section class="projet-pres">
+        <div class="premiere-div">
+            <img src="images/mega_sae/pep_accueil.png">
+            <ul>
+                <li>Participants: Emile Dechenaud – Jarod Tivollier – Léo Ducruet – Emilie Dubief – Sarah Sekma - moi</li>
+                <li>Logiciels: Java, Javafx, HTML/CSS, Whimsical, RStudio, Git, IntelliJ</li>
+            </ul>
+        </div>
+        <div class="paragraphe">
+            <h3>Le but du projet</h3>
+            <h4>
+                PROBLEMATIQUE PRINCIPALE : Réaliser une application lourde de gestion d'évènements
+            </h4>
+            <p>
+                Le but de ce projet était de réaliser une application lourde de gestion d’évènements réalisée en java et javaFX. Le projet a duré 2 mois, dont 5 jours de code, c’était mon premier gros projet dans le monde de l’informatique.
+            </p>
+
+            <h4>
+                DONNEES ET SOURCES A DISPOSITION
+            </h4>
+            <ul>
+                <li>- Sujet</li>
+                <li>- Amphi de présentation</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="travail">
+        
+        <div class="paragraphe">
+            <h4>Première étape : Gestion de projet</h4>
+            <ul>
+                <p>Rendus attendus à la fin de la première phase:</p>
+                <li><a href="documents/mega_sae/gestion_projet.pdf">- Un dossier de gestion</a></li>
+                <li><a href="documents/mega_sae/fonctions.pdf">- Un document Rmd avec fonctions d’optimisation</a></li>
+                <li><a href="documents/mega_sae/B1-16.graphes.pdf">- Un document sur des graphes</a></li>
+            </ul>
+            <p>Pour être exacte la phase de gestion de projet est plutôt arrivée en deuxième à cause d’une mauvaise organisation de la part de nos commanditaires. Nous avons tout de même dû remplacer nos premières séances de conception par de la gestion de projet. 
+            </p>
+            <p>
+                Suite à ces séances, nous avons pu choisir ce que nous voulions faire comme application, nous avons décidé de créer un logiciel de gestion d’évènements en entreprise nommé PEP: ProEventPlanner. Nous avons choisi nos utilisateurs cibles, analysé les risques, designé notre logo et choisi notre charte graphique.
+            </p>
+            <p>
+                Lors de cette phase nous avons également eu plusieurs séances de maths sur les graphes et l’optimisation de fonctions pour nous permettre de mieux gérer notre organisation et le financement potentiel du logiciel (dans un contexte d’imagination).
+            </p>
+
+            <h3>Mon travail</h3>
+            <p>
+                J’ai participé activement à toutes les activités de cette phase et plus particulièrement la définition des utilisateurs et la réalisation du document en Rstudio sur l’optimisation de fonctions.
+            </p>
+        </div>
+        
+        <div class="photos">
+            <figure>
+                <img src="images/mega_sae/besoins.png" class="photo">
+                <figcaption>Gestion : besoins identifiés</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/risques.png" class="photo">
+                <figcaption>Gestion : risques identifiés</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/fonctions.png" class="photo">
+                <figcaption>Une des fonctions élaborées</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/graphe.png" class="photo">
+                <figcaption>Début du graphe réalisé</figcaption>
+            </figure>
+        </div>
+
+        <div class="paragraphe">
+            <h4>Deuxième étape : Conception IHM</h4>
+            <ul>
+                <p>Rendus attendus à la fin de la deuxième phase:</p>
+                <li><a href="documents/mega_sae/B1-16-dossier-IHM.pdf">- Un dossier de conception</a></li>
+            </ul>
+            
+            <p>
+                Cette phase était dédié à l’aspect un peu plus technique du projet. Nous devions trouver nos cas d’utilisation, les prioriser, et réaliser un diagramme des cas d’utilisation. En plus de cela, il nous a fallu réaliser un diagramme de séquence, et deux diagrammes UML (l’un moins détaillé). Nous avons également dû préparer les maquettes pour la partie front-end de notre future application.
+            </p>
+            <p>
+                Malheureusement nous n’avons pas réellement respecté le design d’une application lourde classique, cependant le manque de fonctionnalités dû au manque de temps pour l’implémenter nous a fait plus pencher pour un design plus simpliste rappelant les application web.</p>
+
+            <h3>Mon travail</h3>
+            <p>
+                Nous avons tous participé aux choix des cas d’utilisation, cependant la mise au propre sur Visual Paradigm a été quasi individuelle. J’ai aidé un peu partout pour répondre aux questions mais ma réelle tâche a été de réaliser les personas, rédiger les scénarios alternatifs et de rédiger et mettre en forme le document final. 
+            </p>
+        </div>
+        
+        <div class="photos">
+            <figure>
+                <img src="images/mega_sae/personna_exemple.png" class="photo">
+                <figcaption>Conception : personna 1</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/personna_exemple2.png" class="photo">
+                <figcaption>Conception : personna 2</figcaption>
+            </figure>
+        </div>
+        
+        <div class="paragraphe">
+            <h4>Dernière étape : Code</h4>
+            <ul>
+                <p>Rendus attendus à la fin de la première phase:</p>
+                <li>Une application fonctionnelle correspondant aux attentes</li>
+                <li><a href="documents/mega_sae/B1_16_Bilan_de_projet.pdf">- Un bilan de revenu sur le projet</a></li>
+                
+            </ul>
+            
+            <p>
+                Cette phase était la plus intense. Nous avions 5 jours pour implémenter la totalité de notre application et préparer une soutenance, une démo de l’application et un pitch de marketing. Nous avons utilisé java et javaFX avec un modèle MVC comme il était imposé dans le sujet pour la réalisation de l’application.
+            </p>
+
+            <h3>Mon travail</h3>
+            <p>
+                J’ai participé activement au code, aidant mes camarades lorsque j’en avais la possibilité. Je me suis d’abord chargé de l’implémentation du modèle avec une autre personne. Puis j’ai beaucoup participé à l’implémentation des controlers. Et un peu sur la création d’une page en javaFX. Au final nous avons dû retravailler la construction de notre modèle à cause de fifférentes pratiques entre les membres. J’ai passé deux heures avec ma collègue à tout remettre en place et renommer correctement. Enfin j’ai été l’une des deux personnes ayant rédigé et mis en place le pitch et notre support de présentation en plus d’avoir écrit le plan de la soutenance finale qui s’est très bien passée.
+            </p>
+        </div>
+        
+        <div class="photos">
+            <figure>
+                <img src="images/mega_sae/pep_accueil.png" class="photo">
+                <figcaption>PEP : Accueil</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/pep_creation_event.png" class="photo">
+                <figcaption>PEP : Création d'évènement</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/pep_add_guest.png" class="photo">
+                <figcaption>PEP : Ajout d'invité</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/pep_materiel.png" class="photo">
+                <figcaption>PEP : Ajout de matériel</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/pep_playlist.png" class="photo">
+                <figcaption>PEP : Ajout de playlist</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/pep_menu.png" class="photo">
+                <figcaption>PEP : Ajout de menu + gestion d'erreur</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/pep_budget.png" class="photo">
+                <figcaption>PEP : Gestion de budget</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mega_sae/pep_archives.png" class="photo">
+                <figcaption>PEP : Archives</figcaption>
+            </figure>
+        </div>
+
+    </section>
+</body>
+
+<footer>
+
+    Mis à jour le : 18/11/2024
+
+</footer>
+
+</html>

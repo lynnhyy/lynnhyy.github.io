@@ -9,8 +9,9 @@
     
     --perso-shadow:none;
     --accroche-shadow: white;
-    --acc-btn: silver;
-    --acc-btn-hov: white;
+    --acc-btn: rgb(113, 234, 255);
+    --btn-text : black;
+    --acc-btn-hov: rgb(238, 238, 238);
 
     --button:black;
     --button-bg:white;
@@ -32,8 +33,9 @@
 
 --perso-shadow:none;
 --accroche-shadow: black;
---acc-btn: silver;
---acc-btn-hov: white;
+--acc-btn: rgb(1, 0, 70);
+--btn-text : white;
+--acc-btn-hov: rgb(113, 234, 255);
 
 --button:black;
 --button-bg:white;
@@ -57,7 +59,8 @@
     flex-wrap:wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 200px;
+    margin-right:10%;
+    margin-left:10%;
     gap:100px;
 }
 
@@ -106,8 +109,7 @@
 .button-important a{
     text-decoration: none;
     font-size: 25px;
-    color:white;
-    text-shadow: 3px 2px black;
+    color:var(--btn-text);
 }
 
 

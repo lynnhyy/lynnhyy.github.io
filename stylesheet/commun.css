@@ -2,7 +2,7 @@
     :root{
 
         --background-color:#010018;
-        --headbg:rgba(0, 0, 0, 0.829);
+        --headbg:url('../images/icones/banderole-sombre.png');
         --main-color:#f3f3f3;
         --filter-logo:invert(100%);
         --border-color : white;
@@ -16,12 +16,12 @@
     [data-theme="light"] {
         
         --background-color:#f1f1ff;
-        --headbg:url(/images/bannière\ officielle.png);
+        --headbg:url('../images/icones/banderole-clair.png');
         --main-color:#14121C;
         --border-color : black;
         --filter-logo:invert(0%);
 
-        --title1-color: black;
+        --title1-color: #14121C;
         --title1-shadow: 0 0 60px  white;
         --title2-color:#14121C;
         --title3-color:black;
@@ -35,10 +35,8 @@ body{
     margin:0;
     display:flex;
     flex-direction: column;
-
     flex-wrap: wrap;
-    gap:75px;
-
+    gap:20px;
 
     font-family: system-ui;
     background:var(--background-color);
@@ -49,17 +47,21 @@ body{
 
 .Title{
     background: var(--headbg);
-    display:block;
-    border:3px double var(--border-color); 
-    margin: 100px 400px 100px 400px;
+    background-blend-mode:color-burn;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height:200px;
 }
 
 
 h1{
     font-family: system-ui;
-    margin: 50px 50px 30px 50px;
+    width:75%;
+    margin: 0;
     text-align: center;
-    font-size: 100px;
+    font-size: 75px;
     color: var(--title1-color);
     text-shadow: 0px 0px 10px var(--title1-shadow);
 

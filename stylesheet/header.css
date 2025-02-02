@@ -6,7 +6,8 @@
         /*----header---*/
         --a-color: rgb(113, 234, 255);
         --abg:black;
-        --abg-hover:#9b9b9b;
+        --abg-hover:rgb(238, 238, 238);
+        --abg-color-hover: #010018;
         --filter-button: invert(100%);
         
         /*------Footer-------*/
@@ -18,7 +19,8 @@
     /*----header---*/
     --a-color: rgb(113, 234, 255);
     --abg:black;
-    --abg-hover:#9b9b9b;
+    --abg-hover:rgb(238, 238, 238);
+    --abg-color-hover: #010018;
     --filter-button: invert(0%);
 
     /*------Footer-------*/
@@ -46,7 +48,7 @@ header button{
 }
 
 button img{
-    width:100px;
+    width:60px;
     filter: var(--filter-button);
 }
 
@@ -90,6 +92,11 @@ header a {
 
 header  li:hover{
     background: var(--abg-hover);
+    color : var(--abg-color-hover);
+    
+}
+header a:hover, .bouton:hover{
+    color : var(--abg-color-hover);
 }
 
 /*--Dropdown--*/
